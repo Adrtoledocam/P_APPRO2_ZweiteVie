@@ -137,3 +137,22 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# --- .NET MAUI / C# Specific ---
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# macOS DS_Store
+.DS_Store
+
+# Android-specific artifacts
+*.ap_
+*.apk
+*.dex
