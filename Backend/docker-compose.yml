@@ -6,7 +6,7 @@ services:
     container_name: db_container
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: prophotostock
+      MYSQL_DATABASE: zweitevie_db
       MYSQL_USER: db_root
       MYSQL_PASSWORD: db_root
     restart: always
@@ -41,6 +41,9 @@ services:
       NODE_ENV: development
     ports:
       - "8080:8080"
+    volumes:
+      - ./app:/home/node/app  
+      - /home/node/app/node_modules
     depends_on:
       - db
     networks:

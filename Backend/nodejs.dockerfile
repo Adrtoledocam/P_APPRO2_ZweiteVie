@@ -1,6 +1,7 @@
 FROM node:20
 
-#RUN npm install -g nodemon
+RUN npm install -g nodemon
+
 WORKDIR /home/node/app
 COPY app/package*.json ./
 
