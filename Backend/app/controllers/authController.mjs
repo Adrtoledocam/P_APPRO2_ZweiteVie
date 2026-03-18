@@ -1,76 +1,69 @@
 import {pool} from "../config/db.mjs";
-import crypto from "crypto";
+import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-const generateSalt = () => crypto.randomBytes(16).toString("hex");
-
-const hashPassword = (password, salt) => 
-    crypto.createHmac("sha256", salt).update(password).digest("hex");
-
 export const register = async (req, res) => {
-    const {username, password, role, email} = req.body;
+    const {username, email, password} = req.body;
 
-    if (!username || !password || !role)
-        return res.status(400).json({error:"missing fields"});
+    if (!username || !password || !email)
+        return res.status(400).json({error:"Des champs requis sont manquants"});
+    if(username.length <3 || username.length >50)
+        return res.status(400).json({error: "Le nom d'utilisateur doit contenir entre 3 et 50 caractères."})
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email))
+        return res.status(400).json({error: "Le format de l'adresse email est invalide"})
 
-    const allowedRoles = ["admin", "photographer", "client"];
-    if (!allowedRoles.includes(role)) 
-        return res.status(400).json({ error: "Rôle invalide." });
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-+_!@#$%^&*.,?]).{8,}$/;    
+    if (!passwordRegex.test(password)) 
+        return res.status(400).json({ error: "Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule, un chiffre et un symbole."});
+    
     try{
-        const salt =  generateSalt();
-        const hashed = hashPassword(password, salt);
-
-        const sqlUser = `INSERT INTO t_users (useName, usePassword, useSalt, useRole, useEmail) VALUES (?,?,?,?,?)`;
-        const [userResult] = await pool.query(sqlUser, [username, hashed, salt, role, email]);
-
-        const newUserId = userResult.insertId;
-        if (role === "photographer") {
-            const sqlPhotog = `INSERT INTO t_photographers (fkUser) VALUES (?)`;
-            await pool.query(sqlPhotog, [newUserId]);
+        
+        const [existingUser] = await pool.execute('SELECT * FROM t_user WHERE useEmail = ?',[email]);
+        if(existingUser.length>0){
+            return res.status(400).json({message: "Cet email est déjà utilisé."})
         }
-        res.json ({message : "User registered sucessfully"});
+        
+        const salt =  await bcrypt.genSalt(10);
+        const hashed = await bcrypt.hash(password, salt);
+
+        await pool.execute(
+            'INSERT INTO t_user (useName, useEmail, usePassword) VALUES (?,?,?)',[username, email, hashed]
+        );
+
+        res.json ({message : "Utilisateur créé avec succès !"});
     } catch (err) {
-        console.error(err);
-        res.status(500).json({error: "Registration failed"});
+        res.status(500).json({error: "Erreur serveur lors de l'inscription."});
     }
 }; 
 
 export const login = async (req, res) => {
     const {email, password} = req.body;
 
-    try{
-        const [rows] = await pool.query("SELECT * FROM t_users WHERE useEmail = ?", [email]);
+    try {
+        const [users] = await pool.execute("SELECT * FROM t_user WHERE useEmail = ?", [email]);
 
-        if (rows.length === 0)
-      return res.status(401).json({ error: "Invalid credentials" });
+        if (users.length === 0)
+        return res.status(401).json({ error: "Cet utilisateur n'est pas enregistré" });
 
-    const user = rows[0];
+        const user = users[0];
 
-    const hashed = hashPassword(password, user.useSalt);
+        if (!user || !(await bcrypt.compare(password, user.usePassword))){
+            return res.status(401).json({ message : "Identifiants invalides."});
+        }
+        
+        const token = jwt.sign(
+            {
+                id: user.useId,
+                isAdmin: user.useIsAdmin,
+            },
+            process.env.JWT_SECRET || "secret_key_toledoc",
+            { expiresIn: "2h" }
+        );
 
-    if (hashed !== user.usePassword)
-      return res.status(401).json({ error: "Invalid credentials" });
-
-    const token = jwt.sign(
-      {
-        id: user.userId,
-        username: user.userName,
-        role: user.useRole,
-      },
-      process.env.JWT_SECRET || "secret123",
-      { expiresIn: "2h" }
-    );
-
-    res.json({ 
-    token, 
-    user: {
-        username: user.useName, 
-        role: user.useRole,
-        email: user.useEmail
-    } 
-});
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Login failed" });
+        res.json({ token, user: { id: user.useId, username: user.useName, email: user.useEmail, isAdmin : user.useIsAdmin }});
+    } catch (error) {    
+        res.status(500).json({ message: "Erreur serveur lors de la connexion." });
   }
 };
