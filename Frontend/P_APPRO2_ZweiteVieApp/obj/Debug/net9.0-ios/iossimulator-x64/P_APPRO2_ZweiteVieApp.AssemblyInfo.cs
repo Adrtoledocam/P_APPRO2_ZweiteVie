@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("P_APPRO2_ZweiteVieApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+88681a2d9f827c86ed9ceb9ae11e302f41276f4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+94771bd75a2a918cbd130c47fa18e846cc509035")]
 [assembly: System.Reflection.AssemblyProductAttribute("P_APPRO2_ZweiteVieApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("P_APPRO2_ZweiteVieApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
