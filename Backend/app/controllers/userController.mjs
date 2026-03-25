@@ -24,3 +24,26 @@ export const updateProfile = async (req, res) => {
         res.status(500).json({ error: "Erreur mise à jour" });
     }
 };
+
+export const getUserStats = async (req, res) => {
+    try {
+        const query = `
+            SELECT 
+                COUNT(*) as totalPubs,
+                SUM(CASE WHEN p.pubStatus = 'Donné' THEN 1 ELSE 0 END) as totalDonated,
+                SUM(CASE WHEN p.pubStatus = 'Donné' THEN c.catCo2Impact ELSE 0 END) as totalCo2
+            FROM t_publication p
+            JOIN t_category c ON p.catId = c.catId
+            WHERE p.useId = ?
+        `;
+        const [stats] = await pool.execute(query, [req.user.id]);
+        const [user] = await pool.execute('SELECT useName, useEmail, usePhone FROM t_user WHERE useId = ?', [req.user.id]);
+
+        res.json({
+            profile: user[0],
+            stats: stats[0]
+        });
+    } catch (err) {
+        res.status(500).json({ error: "Erreur lors du calcul de l'impact." });
+    }
+};

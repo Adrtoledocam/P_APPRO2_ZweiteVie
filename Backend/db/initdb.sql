@@ -7,6 +7,7 @@ CREATE TABLE t_user(
    useEmail VARCHAR(100) NOT NULL,
    usePassword VARCHAR(255) NOT NULL,
    useIsAdmin BOOLEAN NOT NULL DEFAULT FALSE,
+   usePhone VARCHAR(20),
    PRIMARY KEY(useId),
    UNIQUE(useEmail)
 ) ENGINE=InnoDB;
@@ -14,7 +15,10 @@ CREATE TABLE t_user(
 CREATE TABLE t_category(
    catId INT AUTO_INCREMENT,
    catName VARCHAR(50) NOT NULL,
-   PRIMARY KEY(catId)
+   parentId INT NULL,
+   catCo2Impact DECIMAL(5,2) DEFAULT 0.00,
+   PRIMARY KEY(catId),
+   CONSTRAINT FK_cat_parent FOREIGN KEY (parentId) REFERENCES t_category(catId)
 ) ENGINE=InnoDB;
 
 CREATE TABLE t_publication(
@@ -30,9 +34,8 @@ CREATE TABLE t_publication(
    ) NOT NULL,
    pubImage VARCHAR(255) NOT NULL,
    pubStatus ENUM('Disponible', 'Donné', 'Indisponible') NOT NULL DEFAULT 'Disponible',
-   pubCondition,
    pubLocation VARCHAR(150),
-   pubcreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+   pubCreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
    catId INT NOT NULL,
    useId INT NOT NULL,
    PRIMARY KEY(pubId),
@@ -40,7 +43,7 @@ CREATE TABLE t_publication(
    CONSTRAINT FK_pub_user FOREIGN KEY(useId) REFERENCES t_user(useId) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
-CREATE TABLE t_interest(
+CREATE TABLE t_favorite (
    useId INT,
    pubId INT,
    intDate DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -49,5 +52,15 @@ CREATE TABLE t_interest(
    CONSTRAINT FK_int_pub FOREIGN KEY(pubId) REFERENCES t_publication(pubId) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
--- Insertion de quelques catégories pour tester
-INSERT INTO t_category (catName) VALUES ('Meubles'), ('Électronique'), ('Vêtements'), ('Outils');
+
+INSERT INTO t_category (catName, parentId, catCo2Impact) VALUES 
+('Meubles', NULL, 0.00), 
+('Électronique', NULL, 0.00), 
+('Vêtements', NULL, 0.00), 
+('Outils', NULL, 0.00);
+
+INSERT INTO t_category (catName, parentId, catCo2Impact) VALUES 
+('Table', 1, 15.50), 
+('Chaise', 1, 5.20), 
+('Smartphone', 2, 80.00), 
+('T-Shirt', 3, 2.10);

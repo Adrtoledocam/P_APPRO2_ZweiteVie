@@ -130,8 +130,8 @@ export const createPublication = async (req, res) => {
 
         const [result] = await pool.execute(
             `INSERT INTO t_publication (pubTitle, pubDescription, pubCondition, pubImage, pubLocation, catId, useId) 
-             VALUES (?, ?, ?, ?, ?, ?, ?)`,
-            [title, description, condition, uploadResponse.secure_url, location, catId, userId]
+            VALUES (?, ?, ?, ?, ?, ?, ?)`,
+                [title, description, condition, uploadResponse.secure_url, location, catId, userId]
         );
 
         res.status(201).json({ message: "Annonce créée !", pubId: result.insertId });
