@@ -10,4 +10,6 @@ router.get('/profile', verifyToken, getProfile);
 // PUT /api/user/profile 
 router.put('/profile', verifyToken, updateProfile);
 
+// GET  /api/user/stats 
+router.get('/stats', verifyToken, getUserStats);
 export default router;

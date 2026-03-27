@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P_APPRO2_ZweiteVieApp.Views.LoginPage"
+             Title="Login"
+             Shell.NavBarIsVisible="False">
+    <VerticalStackLayout
+        Padding="30"
+        Spacing="20"
+        VerticalOptions="Center">
+
+        <Image Source="logo.png" HeightRequest="100" HorizontalOptions="Center" />
+        
+
+        <Entry Placeholder="Email" Text="{Binding Email}" Keyboard="Email" />
+        <Entry Placeholder="Mot de passe" Text="{Binding Password}" IsPassword="True" />
+
+        <Button Text="Se connecter" Command="{Binding LoginCommand}" BackgroundColor="#008F39" TextColor="White" />
+
+        <Button Text="Se connecter en tant qu'invité" Command="{Binding GuestCommand}" 
+                BackgroundColor="Transparent" TextColor="#008F39" BorderColor="#008F39" BorderWidth="1" />
+
+        <Label Text="ou" VerticalOptions="Center" HorizontalOptions="Center" />
+        <Button Text="Créer un nouveau compte" Command="{Binding GoToRegisterCommand}" 
+        BackgroundColor="Transparent" TextColor="Black" FontSize="12" BorderColor="Black" BorderWidth="1"/>
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+            
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

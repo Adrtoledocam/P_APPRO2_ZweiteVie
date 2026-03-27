@@ -949,3 +949,17 @@ C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVie
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\resizetizer\r\mipmap-xxxhdpi\iconlogo_background.png
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\resizetizer\r\mipmap-xxxhdpi\iconlogo_foreground.png
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\resizetizer\r\mipmap-xxxhdpi\iconlogo_round.png
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\BouncyCastle.Cryptography.dll
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\Google.Protobuf.dll
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\Google.Protobuf.pdb
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\K4os.Compression.LZ4.dll
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\K4os.Compression.LZ4.Streams.dll
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\K4os.Hash.xxHash.dll
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\MySql.Data.dll
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\Newtonsoft.Json.dll
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\System.Configuration.ConfigurationManager.dll
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\System.Diagnostics.EventLog.dll
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\System.Security.Cryptography.ProtectedData.dll
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\System.Security.Permissions.dll
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\System.Windows.Extensions.dll
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\android\assets\x86_64\ZstdSharp.dll

@@ -3,7 +3,6 @@ import cloudinary from "../config/cloudinary.mjs";
 
 export const getPublications = async (req, res) => {
     try {
-        // Extraction des filtres depuis l'URL (ex: ?status=Disponible&condition=Neuf)
         const {condition, search, catId } = req.query;
         
         let query = `
@@ -42,39 +41,6 @@ export const getPublications = async (req, res) => {
         res.status(500).json({ error: "Erreur lors de la recherche des publications." });
     }
 };
-
-/*
-export const getPublications = async (req, res) => {
-    try {    
-        const query = `
-            SELECT 
-                p.pubId, 
-                p.pubTitle, 
-                p.pubDescription,
-                p.pubCondition, 
-                p.pubImage, 
-                p.pubStatus, 
-                p.pubLocation, 
-                p.pubCreatedAt,
-                c.catName,
-                u.useName as donorName
-            FROM t_publication p
-            JOIN t_category c ON p.catId = c.catId
-            JOIN t_user u ON p.useId = u.useId
-            ORDER BY p.pubCreatedAt DESC
-        `;
-
-        const [rows] = await pool.execute(query);
-        
-        res.json(rows);
-    } catch (err) {
-        console.error("Erreur lors de la récupération des publications:", err.message);
-        res.status(500).json({ error: "Erreur serveur lors de la récupération des annonces." });
-    }
-};
-*/
-
-
 
 export const getPublicationById = async (req, res) => {
     const { id } = req.params;
@@ -129,8 +95,8 @@ export const createPublication = async (req, res) => {
         });
 
         const [result] = await pool.execute(
-            `INSERT INTO t_publication (pubTitle, pubDescription, pubCondition, pubImage, pubLocation, catId, useId) 
-            VALUES (?, ?, ?, ?, ?, ?, ?)`,
+            `INSERT INTO t_publication (pubTitle, pubDescription, pubCondition, pubImage, pubLocation, catId, useId, pubStatus) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
                 [title, description, condition, uploadResponse.secure_url, location, catId, userId]
         );
 
