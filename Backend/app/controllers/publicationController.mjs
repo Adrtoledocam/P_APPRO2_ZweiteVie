@@ -86,7 +86,7 @@ export const getMyPublications = async (req, res) => {
 };
 
 export const createPublication = async (req, res) => {
-    const { title, description, condition, location, catId, imageBase64 } = req.body;
+    const { title, description, conId, location, catId, imageBase64 } = req.body;
     const userId = req.user.id; 
 
     try {    
@@ -95,9 +95,9 @@ export const createPublication = async (req, res) => {
         });
 
         const [result] = await pool.execute(
-            `INSERT INTO t_publication (pubTitle, pubDescription, pubCondition, pubImage, pubLocation, catId, useId, pubStatus) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
-                [title, description, condition, uploadResponse.secure_url, location, catId, userId]
+            `INSERT INTO t_publication (pubTitle, pubDescription, conId, pubImage, pubLocation, catId, useId) 
+            VALUES (?, ?, ?, ?, ?, ?, ?)`,
+                [title, description, conId, uploadResponse.secure_url, location, catId, userId ]
         );
 
         res.status(201).json({ message: "Annonce créée !", pubId: result.insertId });

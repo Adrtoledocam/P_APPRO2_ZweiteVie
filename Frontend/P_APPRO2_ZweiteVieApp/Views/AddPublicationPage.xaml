@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P_APPRO2_ZweiteVieApp.Views.AddPublicationPage"
+             Title="Nouvelle Annonce">
+    <ScrollView Padding="20">
+        <VerticalStackLayout Spacing="15">
+
+            <Label Text="Titre" FontAttributes="Bold" />
+            <Entry Placeholder="Ex: Table en bois, Vélo enfant..."
+                   Text="{Binding Title}" />
+
+            <Label Text="Catégorie" FontAttributes="Bold" Margin="0,5,0,0"/>
+            <Picker Title="Choisir une catégorie"
+                    ItemsSource="{Binding Categories}"
+                    ItemDisplayBinding="{Binding CatName}"
+                    SelectedItem="{Binding SelectedCategory}" />
+
+            <Label Text="État du produit" FontAttributes="Bold" />
+            <Picker Title="Quel est l'état ?"
+                    ItemsSource="{Binding ItemConditions}"
+                    ItemDisplayBinding="{Binding ConName}"
+                    SelectedItem="{Binding SelectedCondition}" />
+
+            <Label Text="Description" FontAttributes="Bold" />
+            <Editor Placeholder="Décrivez l'objet (dimensions, défauts, historique...)"
+                    Text="{Binding Description}"
+                    HeightRequest="100" />
+
+            <Label Text="Localisation" FontAttributes="Bold" />
+            <Entry Placeholder="Ex: Lausanne 1004"
+                   Text="{Binding Location}" />
+
+            <Label Text="Photo" FontAttributes="Bold" Margin="0,5,0,0"/>
+            <Button Text="Choisir une photo"
+                    Command="{Binding PickImageCommand}"
+                    BackgroundColor="Transparent"
+                    TextColor="#008F39"
+                    BorderColor="#008F39"
+                    BorderWidth="1"
+                    CornerRadius="8" />
+
+            <Frame IsVisible="{Binding HasImage}"
+                   Padding="0"
+                   CornerRadius="10"
+                   BorderColor="#DDDDDD"
+                   HasShadow="False">
+                <Image Source="{Binding PreviewImage}"
+                       HeightRequest="220"
+                       Aspect="AspectFit" />
+            </Frame>
+            <Button Text="PUBLIER L'ANNONCE"
+                    Command="{Binding SubmitCommand}"
+                    BackgroundColor="#008F39"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    CornerRadius="10"
+                    Margin="0,20,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

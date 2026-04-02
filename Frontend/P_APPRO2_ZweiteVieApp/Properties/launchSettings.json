@@ -2,7 +2,10 @@
   "profiles": {
     "Windows Machine": {
       "commandName": "Project",
-      "nativeDebugging": false
+      "nativeDebugging": false,
+      "remoteDebugEnabled": true,
+      "jsWebView2Debugging": true,
+      "sqlDebugging": true
     }
   }
 }

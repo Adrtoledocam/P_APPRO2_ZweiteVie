@@ -14,43 +14,34 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
     {
         private readonly ApiService _apiService;
 
-        public ObservableCollection<Publication> Publications { get; set; }        
+        public ObservableCollection<Publication> Publications { get; set; }
+
+        private string _searchQuery;
+        public string SearchQuery
+        {
+            get => _searchQuery;
+            set { _searchQuery = value; OnPropertyChanged(); }
+        }
+
 
         public ICommand RefreshCommand { get; }
-        /*
+        public ICommand SearchCommand { get; }
+
         public ICommand SelectPublicationCommand => new Command<Publication>(async (pub) =>
         {
-            var navigationParameter = new Dictionary<string, object>
-            {
-                { "SelectedPublication", pub }
-            };
-            await Shell.Current.GoToAsync("PublicationDetailPage", navigationParameter);
-        });
-        */
-        public ICommand SelectPublicationCommand => new Command<Publication>(async (pub) =>
-        {
-            if (pub == null) return;
-
-            // 1. Guardamos el ID en los ajustes de la app (Preferences)
-            Preferences.Set("last_selected_publication_id", pub.PubId);
-
-            // 2. Navegamos pasando el objeto (esto es lo que ya tenías y es correcto)
-            var navigationParameter = new Dictionary<string, object>
-            {
-                { "SelectedPublication", pub }
-             };
-            await Shell.Current.GoToAsync("PublicationDetailPage", navigationParameter);
+            var param = new Dictionary<string, object> { { "SelectedPublication", pub } };
+            await Shell.Current.GoToAsync("PublicationDetailPage", param);
         });
         public MainViewModel()
         {
-            _apiService = new ApiService(); 
-            Publications = new ObservableCollection<Publication>();
+            _apiService = new ApiService();
             RefreshCommand = new Command(async () => await LoadPublicationsAsync());
+            SearchCommand = new Command(async () => await LoadPublicationsAsync(SearchQuery));
 
             Task.Run(async () => await LoadPublicationsAsync());
         }
 
-        public async Task LoadPublicationsAsync()
+        public async Task LoadPublicationsAsync(string search = "")
         {
             if (IsBusy) return;
 
@@ -61,7 +52,11 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
 
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
-                    Publications.Clear();
+                    if (Publications == null)
+                        Publications = new ObservableCollection<Publication>();
+
+                    Publications.Clear(); // Es mejor limpiar antes de recargar
+
                     foreach (var item in items)
                     {
                         Publications.Add(item);

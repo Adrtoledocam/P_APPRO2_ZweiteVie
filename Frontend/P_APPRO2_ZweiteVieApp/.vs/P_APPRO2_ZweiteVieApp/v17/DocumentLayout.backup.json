@@ -7,72 +7,8 @@
       "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\publicationdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\publicationdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\publicationdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\publicationdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\publicationdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\publicationdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\services\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:services\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,54 +19,104 @@
       "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:models\\publication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pq17tmn\\Downloads\\ApiService (2).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pq17tmn\\Downloads\\ApiService (1).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pq17tmn\\Downloads\\RegisterViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\publicationdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\publicationdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pq17tmn\\Downloads\\ApiService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\platforms\\android\\androidmanifest.xml||{6B79B2C4-8503-4A04-8248-ADCEF2B49CB1}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:platforms\\android\\androidmanifest.xml||{6B79B2C4-8503-4A04-8248-ADCEF2B49CB1}"
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pq17tmn\\Downloads\\LoginViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\addpublicationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\addpublicationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pq17tmn\\Downloads\\PublicationDetailPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\publicationdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\publicationdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\addpublicationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\addpublicationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\publicationdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\publicationdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pq17tmn\\Downloads\\PublicationDetailViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pq17tmn\\Downloads\\MainViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\addpublicationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\addpublicationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pq17tmn\\Downloads\\RegisterPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pq17tmn\\Downloads\\ProfileViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\models\\itemcondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:models\\itemcondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\services\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:services\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\platforms\\android\\androidmanifest.xml||{6B79B2C4-8503-4A04-8248-ADCEF2B49CB1}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:platforms\\android\\androidmanifest.xml||{6B79B2C4-8503-4A04-8248-ADCEF2B49CB1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\p_appro2_zweitevieapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -163,55 +149,54 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "ProfileViewModel.cs",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\ProfileViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ProfileViewModel.cs",
               "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\ProfileViewModel.cs",
               "RelativeToolTip": "ViewModels\\ProfileViewModel.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAAwFMAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAcwEQAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T07:12:57.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\LoginPage.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\LoginPage.xaml.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\LoginPage.xaml.cs",
-              "RelativeToolTip": "Views\\LoginPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T09:38:47.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginPage.xaml",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\LoginPage.xaml",
-              "RelativeDocumentMoniker": "Views\\LoginPage.xaml",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\LoginPage.xaml",
-              "RelativeToolTip": "Views\\LoginPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MainPage.xaml",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\MainPage.xaml",
+              "RelativeToolTip": "MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T09:21:43.222Z",
+              "WhenOpened": "2026-03-27T08:26:45.265Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADgAAAARAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwDkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T08:04:22.962Z",
+              "WhenOpened": "2026-03-27T07:04:41.248Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AddPublicationPage.xaml",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\AddPublicationPage.xaml",
+              "RelativeDocumentMoniker": "Views\\AddPublicationPage.xaml",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\AddPublicationPage.xaml",
+              "RelativeToolTip": "Views\\AddPublicationPage.xaml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAkwDwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-30T09:06:19.401Z"
             },
             {
               "$type": "Document",
@@ -221,40 +206,14 @@
               "RelativeDocumentMoniker": "Services\\ApiService.cs",
               "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Services\\ApiService.cs",
               "RelativeToolTip": "Services\\ApiService.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAYwGkAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAwwLYAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-26T07:17:08.687Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAiwDkAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T07:04:41.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "PublicationDetailPage.xaml",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\PublicationDetailPage.xaml",
-              "RelativeDocumentMoniker": "Views\\PublicationDetailPage.xaml",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\PublicationDetailPage.xaml",
-              "RelativeToolTip": "Views\\PublicationDetailPage.xaml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAB8AAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T09:10:24.304Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "PublicationDetailPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\PublicationDetailPage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\PublicationDetailPage.xaml.cs",
@@ -268,19 +227,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ProfilePage.xaml",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\ProfilePage.xaml",
-              "RelativeDocumentMoniker": "Views\\ProfilePage.xaml",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\ProfilePage.xaml",
-              "RelativeToolTip": "Views\\ProfilePage.xaml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T07:15:33.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "ProfilePage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\ProfilePage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ProfilePage.xaml.cs",
@@ -293,98 +239,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T07:52:25.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\MainPage.xaml.cs",
-              "RelativeToolTip": "MainPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T08:26:48.716Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\MainPage.xaml",
-              "RelativeDocumentMoniker": "MainPage.xaml",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\MainPage.xaml",
-              "RelativeToolTip": "MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "Views\\ProfilePage.xaml",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\ProfilePage.xaml",
+              "RelativeToolTip": "Views\\ProfilePage.xaml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T08:26:45.265Z",
+              "WhenOpened": "2026-03-27T07:15:33.857Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RegisterPage.xaml",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\RegisterPage.xaml",
-              "RelativeDocumentMoniker": "Views\\RegisterPage.xaml",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\RegisterPage.xaml",
-              "RelativeToolTip": "Views\\RegisterPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T09:00:05.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PublicationDetailViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\PublicationDetailViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\PublicationDetailViewModel.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\PublicationDetailViewModel.cs",
-              "RelativeToolTip": "ViewModels\\PublicationDetailViewModel.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAwCIAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Publication.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\Publication.cs",
+              "RelativeDocumentMoniker": "Models\\Publication.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\Publication.cs",
+              "RelativeToolTip": "Models\\Publication.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA5wBUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T09:06:46.228Z",
+              "WhenOpened": "2026-03-25T07:51:58.988Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAmwEYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T12:23:15.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "BaseViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\BaseViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\BaseViewModel.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\BaseViewModel.cs",
-              "RelativeToolTip": "ViewModels\\BaseViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T14:14:14.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 2,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "AppShell.xaml.cs",
@@ -397,7 +278,188 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\MainPage.xaml.cs",
+              "RelativeToolTip": "MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T08:26:48.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AddPublicationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\AddPublicationViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AddPublicationViewModel.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\AddPublicationViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AddPublicationViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T09:03:57.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PublicationDetailPage.xaml",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\PublicationDetailPage.xaml",
+              "RelativeDocumentMoniker": "Views\\PublicationDetailPage.xaml",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\PublicationDetailPage.xaml",
+              "RelativeToolTip": "Views\\PublicationDetailPage.xaml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-27T09:10:24.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PublicationDetailViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\PublicationDetailViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\PublicationDetailViewModel.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\PublicationDetailViewModel.cs",
+              "RelativeToolTip": "ViewModels\\PublicationDetailViewModel.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAwCIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T09:06:46.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegisterPage.xaml",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\RegisterPage.xaml",
+              "RelativeDocumentMoniker": "Views\\RegisterPage.xaml",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\RegisterPage.xaml",
+              "RelativeToolTip": "Views\\RegisterPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-27T09:00:05.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-27T07:20:09.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ItemCondition.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\ItemCondition.cs",
+              "RelativeDocumentMoniker": "Models\\ItemCondition.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\ItemCondition.cs",
+              "RelativeToolTip": "Models\\ItemCondition.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T11:00:12.096Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 17,
+              "Title": "AddPublicationPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\AddPublicationPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\AddPublicationPage.xaml.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\AddPublicationPage.xaml.cs",
+              "RelativeToolTip": "Views\\AddPublicationPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T09:08:06.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T07:30:11.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T14:14:14.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAmwCEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T08:04:22.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\LoginPage.xaml.cs",
+              "RelativeToolTip": "Views\\LoginPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T09:38:47.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "Views\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\LoginPage.xaml",
+              "RelativeToolTip": "Views\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-27T09:21:43.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T07:52:25.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAmwEYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T12:23:15.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "Config.cs",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Services\\Config.cs",
               "RelativeDocumentMoniker": "Services\\Config.cs",
@@ -405,25 +467,11 @@
               "RelativeToolTip": "Services\\Config.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T07:53:36.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T07:53:36.201Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Publication.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\Publication.cs",
-              "RelativeDocumentMoniker": "Models\\Publication.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\Publication.cs",
-              "RelativeToolTip": "Models\\Publication.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowCwAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T07:51:58.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "RegisterPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\RegisterPage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\RegisterPage.xaml.cs",
@@ -431,12 +479,11 @@
               "RelativeToolTip": "Views\\RegisterPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T08:21:11.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T08:21:11.856Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "AndroidManifest.xml",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Platforms\\Android\\AndroidManifest.xml",
               "RelativeDocumentMoniker": "Platforms\\Android\\AndroidManifest.xml",
@@ -444,25 +491,11 @@
               "RelativeToolTip": "Platforms\\Android\\AndroidManifest.xml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2026-03-25T08:12:12.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T08:12:12.524Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\AppShell.xaml",
-              "RelativeDocumentMoniker": "AppShell.xaml",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\AppShell.xaml",
-              "RelativeToolTip": "AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T07:20:09.459Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\MauiProgram.cs",
               "RelativeDocumentMoniker": "MauiProgram.cs",
@@ -470,25 +503,11 @@
               "RelativeToolTip": "MauiProgram.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T08:26:39.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T08:26:39.807Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Models\\Category.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Models\\Category.cs",
-              "RelativeToolTip": "Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T07:30:11.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 29,
               "Title": "P_APPRO2_ZweiteVieApp.csproj",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\P_APPRO2_ZweiteVieApp.csproj",
               "RelativeDocumentMoniker": "P_APPRO2_ZweiteVieApp.csproj",
@@ -496,12 +515,11 @@
               "RelativeToolTip": "P_APPRO2_ZweiteVieApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-25T10:01:18.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T10:01:18.593Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 30,
               "Title": "Xamarin.Android.Aapt2.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\35.0.78\\tools\\Xamarin.Android.Aapt2.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\35.0.78\\tools\\Xamarin.Android.Aapt2.targets",
@@ -509,12 +527,11 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\35.0.78\\tools\\Xamarin.Android.Aapt2.targets",
               "ViewState": "AgIAAL4AAAAAAAAAAAApwNUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-03-25T08:20:39.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T08:20:39.145Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 33,
               "Title": "appiconfg.svg",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Resources\\AppIcon\\appiconfg.svg",
               "RelativeDocumentMoniker": "Resources\\AppIcon\\appiconfg.svg",
@@ -522,12 +539,11 @@
               "RelativeToolTip": "Resources\\AppIcon\\appiconfg.svg",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVDhPjVNLSFRRGP7unTsz9w75uOaMZlMNpo1aFFJRodRGN7UwatMiKgga3JgVRBSNSA8RooUFLRycCCpc9ITIFi0EW\u002BhCW/gONYUcxplsQL13nKv3dM6ZGV\u002BE9N37c\u002B455/\u002B\u002B/7s/5whYA7/fP5L63BSCIDxvbGxsAiEktZQEE6Brm6K1tXWS5TU0NNQyjsiZKQgCBgBChQ2Q\u002BfswpytgDLmg9zihD9XBNJfhcrlstPoeqlVPRS6uCBDy1broLnN29PkxPeaFFmpC79gOdEu9sB8KQRt\u002Bz/NUVbUGAoGpJIfc5j2gZIuv3fam/sCNGrdjGLGwE23hR\u002BiMeBCKAbXlOTgfr0VW9QfqD4iEZ5BIJNAWDI5yB75X0tXqwrc1JZk90MKVUEq/4UplFc4W5UKwiHjaO4tx90NWiYfT5cQuj4dRITLrZfn9104XtOD3\u002BE4z7/BrqIoKZ4YM37E8XNifA4vdiuCIApPzWY9Wmy9h6UfOpd13t89FstEceyF2PJlAfNHkm6y6xSbxcTASpyuMyFT4NoeI6PV6mzEvvIy0oO\u002BXPVGULaMs186jVLVil0zzF\u002BI4ki\u002BnqjP\u002BGgemrp0Z\u002BHn8T0d0nyrOTky\u002B8x0tNoxE0iZrcSqXz5lAcroCcXkeBcGpyzcnowRTDk9xoDuEmbkE5vRlfB6cRcWzIXibv\u002BNTf5ST0y7SEBa6MGIaOFje2VUnZSgPTFECMZM9YCeLde6cdwvuVLlXrVMFWXGAHqRRaUlDezyEic6tlbFBbW/oS8nHbf0RDZIooDDLipPeTJwozIJJH4EIoG/y1/6Fe/5bj6lFousa0WjoWjoWiLYhGNidWHcXDNhOsVGWFSg0ZCUdDigbIo11Zv73Oq8C\u002BAsr5V2IWWNA0gAAAABJRU5ErkJggg==",
-              "WhenOpened": "2026-03-25T08:10:12.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T08:10:12.545Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 32,
               "Title": "splash.svg",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Resources\\Splash\\splash.svg",
               "RelativeDocumentMoniker": "Resources\\Splash\\splash.svg",
@@ -535,12 +551,11 @@
               "RelativeToolTip": "Resources\\Splash\\splash.svg",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVDhPjVNLSFRRGP7unTsz9w75uOaMZlMNpo1aFFJRodRGN7UwatMiKgga3JgVRBSNSA8RooUFLRycCCpc9ITIFi0EW\u002BhCW/gONYUcxplsQL13nKv3dM6ZGV\u002BE9N37c\u002B455/\u002B\u002B/7s/5whYA7/fP5L63BSCIDxvbGxsAiEktZQEE6Brm6K1tXWS5TU0NNQyjsiZKQgCBgBChQ2Q\u002BfswpytgDLmg9zihD9XBNJfhcrlstPoeqlVPRS6uCBDy1broLnN29PkxPeaFFmpC79gOdEu9sB8KQRt\u002Bz/NUVbUGAoGpJIfc5j2gZIuv3fam/sCNGrdjGLGwE23hR\u002BiMeBCKAbXlOTgfr0VW9QfqD4iEZ5BIJNAWDI5yB75X0tXqwrc1JZk90MKVUEq/4UplFc4W5UKwiHjaO4tx90NWiYfT5cQuj4dRITLrZfn9104XtOD3\u002BE4z7/BrqIoKZ4YM37E8XNifA4vdiuCIApPzWY9Wmy9h6UfOpd13t89FstEceyF2PJlAfNHkm6y6xSbxcTASpyuMyFT4NoeI6PV6mzEvvIy0oO\u002BXPVGULaMs186jVLVil0zzF\u002BI4ki\u002BnqjP\u002BGgemrp0Z\u002BHn8T0d0nyrOTky\u002B8x0tNoxE0iZrcSqXz5lAcroCcXkeBcGpyzcnowRTDk9xoDuEmbkE5vRlfB6cRcWzIXibv\u002BNTf5ST0y7SEBa6MGIaOFje2VUnZSgPTFECMZM9YCeLde6cdwvuVLlXrVMFWXGAHqRRaUlDezyEic6tlbFBbW/oS8nHbf0RDZIooDDLipPeTJwozIJJH4EIoG/y1/6Fe/5bj6lFousa0WjoWjoWiLYhGNidWHcXDNhOsVGWFSg0ZCUdDigbIo11Zv73Oq8C\u002BAsr5V2IWWNA0gAAAABJRU5ErkJggg==",
-              "WhenOpened": "2026-03-25T08:09:52.282Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T08:09:52.282Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 31,
               "Title": "appicon.svg",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Resources\\AppIcon\\appicon.svg",
               "RelativeDocumentMoniker": "Resources\\AppIcon\\appicon.svg",
@@ -548,159 +563,7 @@
               "RelativeToolTip": "Resources\\AppIcon\\appicon.svg",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVDhPjVNLSFRRGP7unTsz9w75uOaMZlMNpo1aFFJRodRGN7UwatMiKgga3JgVRBSNSA8RooUFLRycCCpc9ITIFi0EW\u002BhCW/gONYUcxplsQL13nKv3dM6ZGV\u002BE9N37c\u002B455/\u002B\u002B/7s/5whYA7/fP5L63BSCIDxvbGxsAiEktZQEE6Brm6K1tXWS5TU0NNQyjsiZKQgCBgBChQ2Q\u002BfswpytgDLmg9zihD9XBNJfhcrlstPoeqlVPRS6uCBDy1broLnN29PkxPeaFFmpC79gOdEu9sB8KQRt\u002Bz/NUVbUGAoGpJIfc5j2gZIuv3fam/sCNGrdjGLGwE23hR\u002BiMeBCKAbXlOTgfr0VW9QfqD4iEZ5BIJNAWDI5yB75X0tXqwrc1JZk90MKVUEq/4UplFc4W5UKwiHjaO4tx90NWiYfT5cQuj4dRITLrZfn9104XtOD3\u002BE4z7/BrqIoKZ4YM37E8XNifA4vdiuCIApPzWY9Wmy9h6UfOpd13t89FstEceyF2PJlAfNHkm6y6xSbxcTASpyuMyFT4NoeI6PV6mzEvvIy0oO\u002BXPVGULaMs186jVLVil0zzF\u002BI4ki\u002BnqjP\u002BGgemrp0Z\u002BHn8T0d0nyrOTky\u002B8x0tNoxE0iZrcSqXz5lAcroCcXkeBcGpyzcnowRTDk9xoDuEmbkE5vRlfB6cRcWzIXibv\u002BNTf5ST0y7SEBa6MGIaOFje2VUnZSgPTFECMZM9YCeLde6cdwvuVLlXrVMFWXGAHqRRaUlDezyEic6tlbFBbW/oS8nHbf0RDZIooDDLipPeTJwozIJJH4EIoG/y1/6Fe/5bj6lFousa0WjoWjoWiLYhGNidWHcXDNhOsVGWFSg0ZCUdDigbIo11Zv73Oq8C\u002BAsr5V2IWWNA0gAAAABJRU5ErkJggg==",
-              "WhenOpened": "2026-03-25T07:58:10.572Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "50a60209-9c42-4ccc-af5f-1d7ad1360a9c",
-        "Display": 0,
-        "X": 813,
-        "Y": -16,
-        "Width": 1377,
-        "Height": 1031,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 3,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Downloads\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Downloads\\LoginViewModel.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\LoginViewModel.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAE8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T10:24:37.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "PublicationDetailPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Downloads\\PublicationDetailPage.xaml.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\PublicationDetailPage.xaml.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Downloads\\PublicationDetailPage.xaml.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\PublicationDetailPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T09:10:09.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ApiService.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Downloads\\ApiService.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\ApiService.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Downloads\\ApiService.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\ApiService.cs",
-              "ViewState": "AgIAAMYAAAAAAAAAAAAYwN8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T07:57:51.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ApiService (2).cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Downloads\\ApiService (2).cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\ApiService (2).cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Downloads\\ApiService (2).cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\ApiService (2).cs",
-              "ViewState": "AgIAANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T12:58:43.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ApiService (1).cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Downloads\\ApiService (1).cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\ApiService (1).cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Downloads\\ApiService (1).cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\ApiService (1).cs",
-              "ViewState": "AgIAAOEAAAAAAAAAAAAAADAAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T12:31:21.934Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Downloads\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\RegisterViewModel.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Downloads\\RegisterViewModel.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\RegisterViewModel.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAFYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T12:26:54.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "ProfileViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Downloads\\ProfileViewModel.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\ProfileViewModel.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Downloads\\ProfileViewModel.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\ProfileViewModel.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAG4AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T08:08:17.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "RegisterPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Downloads\\RegisterPage.xaml.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\RegisterPage.xaml.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Downloads\\RegisterPage.xaml.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\RegisterPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T08:59:27.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Downloads\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Downloads\\MainViewModel.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\MainViewModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T09:00:39.22Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "PublicationDetailViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Downloads\\PublicationDetailViewModel.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\PublicationDetailViewModel.cs",
-              "ToolTip": "C:\\Users\\pq17tmn\\Downloads\\PublicationDetailViewModel.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\PublicationDetailViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC8AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T09:06:40.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T07:58:10.572Z"
             }
           ]
         }

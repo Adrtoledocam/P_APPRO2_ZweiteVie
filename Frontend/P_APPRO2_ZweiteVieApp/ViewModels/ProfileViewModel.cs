@@ -56,8 +56,8 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
             SaveProfileCommand = new Command(async () => await ExecuteSaveProfile());
             LogoutCommand = new Command(async () => await ExecuteLogout());
             //Task.Run(async () => await LoadProfileAsync());
-            //Task.Run(async () => await LoadUserDataAsync());
-            _ = LoadUserDataAsync();
+            Task.Run(async () => await LoadUserDataAsync());
+            //_ = LoadUserDataAsync();
         }
 
         private async Task LoadUserDataAsync()
@@ -79,7 +79,6 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
                         EditName = user.UseName;
                         EditPhone = user.UsePhone;
 
-                        // Actualizamos Preferences por si cambiaron en el servidor
                         Preferences.Set("user_name", user.UseName);
                     });
                 }
@@ -169,7 +168,17 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
 
         private async Task ExecuteLogout()
         {
+
             SecureStorage.Remove("auth_token");
+            Preferences.Clear();
+            CurrentUser = null;
+
+            /**SecureStorage.Remove("auth_token");
+            Preferences.Remove("user_id");
+            Preferences.Remove("user_name");
+            Preferences.Remove("user_email");
+            Preferences.Clear();**/
+
             await Shell.Current.GoToAsync("//LoginPage");
         }
     }

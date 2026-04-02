@@ -1,5 +1,5 @@
 import express from 'express';
-import { getProfile, updateProfile } from '../controllers/userController.mjs';
+import { getProfile, updateProfile, getUserStats } from '../controllers/userController.mjs';
 import { verifyToken } from '../middleware/auth.mjs'; 
 
 const router = express.Router();

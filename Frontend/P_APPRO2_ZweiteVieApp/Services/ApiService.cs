@@ -14,13 +14,14 @@ namespace P_APPRO2_ZweiteVieApp.Services
     public class ApiService
     {
         private readonly HttpClient _httpClient;
-        //private readonly string _baseUrl = P_APPRO2_ZweiteVieApp.Services.Config.BaseUrl;
         private const string _baseUrl = "http://10.0.2.2:8080/api/";
+        //private const string _baseUrl = "http://10.195.74.6/api/" ; 
+        //private const string _baseUrl = " http://127.0.0.1:4040/api/";
+        //private const string _baseUrl = " https://climant-esthetically-laraine.ngrok-free.dev/api/";
         public ApiService()
         {
             _httpClient = new HttpClient();
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            //_httpClient.Timeout = TimeSpan.FromMinutes(3);
         }
 
         //Authentification
@@ -167,6 +168,25 @@ namespace P_APPRO2_ZweiteVieApp.Services
                 Console.WriteLine($"[Error GetPublications]: {ex.Message}");
             }
             return new List<Publication>();
+        }
+
+        public async Task<bool> CreatePublicationAsync(string token, string title, string description, int conId, string location, int catId, string imageBase64)
+        {
+
+            try
+            {
+                SetAuthHeader(token);
+                var data = new { title, description, conId, location, catId, imageBase64 };
+                var content = Serialize(data);
+
+                var response = await _httpClient.PostAsync(_baseUrl + "publications", content);
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[Error CreatePub]: {ex.Message}");
+                return false;
+            }
         }
 
         //Favoris

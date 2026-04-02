@@ -48,6 +48,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = P_APPRO2_ZweiteVieApp.Reso
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/pq17tmn/Documents/GitHub/P_APPRO2_ZweiteVie/Frontend/P_APPRO2_ZweiteVieApp/Views/AddPublicationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = P_APPRO2_ZweiteVieApp.Views.AddPublicationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AddPublicationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AddPublicationPage.xaml
+
 [C:/Users/pq17tmn/Documents/GitHub/P_APPRO2_ZweiteVie/Frontend/P_APPRO2_ZweiteVieApp/Views/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = P_APPRO2_ZweiteVieApp.Views.LoginPage.xaml

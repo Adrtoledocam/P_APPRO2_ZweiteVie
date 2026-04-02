@@ -18,8 +18,8 @@ namespace P_APPRO2_ZweiteVieApp.Models
         [JsonProperty("pubDescription")]
         public string PubDescription { get; set; }
 
-        [JsonProperty("pubCondition")]
-        public string PubCondition { get; set; }
+        [JsonProperty("conId")]
+        public string ConId { get; set; }
 
         [JsonProperty("pubImage")]
         public string PubImage { get; set; }

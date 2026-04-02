@@ -6,38 +6,80 @@
              Title="Zweite Vie">
 
     <Grid RowDefinitions="Auto, *">
-        <SearchBar Grid.Row="0" Placeholder="Rechercher un objet..." Margin="10" />
+        <!-- Barre de recherche — Row 0 -->
+        <SearchBar Grid.Row="0"
+                   Placeholder="Rechercher un objet..."
+                   Text="{Binding SearchQuery}"
+                   SearchCommand="{Binding SearchCommand}"
+                   Margin="10" />
 
-        <!--<RefreshView Grid.Row="1" Command="{Binding RefreshCommand}" IsRefreshing="{Binding IsBusy}">-->
+        <RefreshView Grid.Row="1"
+                     Command="{Binding RefreshCommand}"
+                     IsRefreshing="{Binding IsBusy}">
+
             <CollectionView ItemsSource="{Binding Publications}">
+
+                <CollectionView.EmptyView>
+                    <Label Text="Aucune publication disponible."
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Gray"
+                           Margin="0,40,0,0"/>
+                </CollectionView.EmptyView>
+
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Margin="10" Padding="0" HasShadow="True" CornerRadius="10" BorderColor="#EEEEEE">
+                        <Frame Margin="10,5" Padding="0"
+                               HasShadow="True"
+                               CornerRadius="10"
+                               BorderColor="#EEEEEE">
+
                             <Frame.GestureRecognizers>
-                                <TapGestureRecognizer 
-                                     Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainViewModel}}, Path=SelectPublicationCommand}"
-                                     CommandParameter="{Binding .}" />
+                                <TapGestureRecognizer
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainViewModel}}, Path=SelectPublicationCommand}"
+                                    CommandParameter="{Binding .}" />
                             </Frame.GestureRecognizers>
+
                             <Grid ColumnDefinitions="120, *" HeightRequest="120">
 
-                                <Image Grid.Column="0" Source="{Binding PubImage}" Aspect="AspectFill" />
+                                <Image Grid.Column="0"
+                                       Source="{Binding PubImage}"
+                                       Aspect="AspectFill" />
 
-                                <VerticalStackLayout Grid.Column="1" Padding="10" Spacing="2">
-                                    <Label Text="{Binding PubTitle}" FontAttributes="Bold" FontSize="16" MaxLines="1" />
-                                    <Label Text="{Binding CatName}" FontSize="12" TextColor="#008F39" />
-                                    <Label Text="{Binding PubDescription}" FontSize="12" MaxLines="2" TextColor="Gray" />
-
-                                    <HorizontalStackLayout Spacing="10" Margin="0,5,0,0">
-                                        <Label Text="{Binding PubLocation}" FontSize="10" VerticalOptions="End" />
-                                        <Label Text="{Binding DonorName}" FontSize="10" FontAttributes="Italic" VerticalOptions="End" />
+                                <VerticalStackLayout Grid.Column="1" Padding="10" Spacing="3">
+                                    <Label Text="{Binding PubTitle}"
+                                           FontAttributes="Bold"
+                                           FontSize="15"
+                                           MaxLines="1" />
+                                    <Label Text="{Binding CatName}"
+                                           FontSize="12"
+                                           TextColor="#008F39" />
+                                    <Label Text="{Binding ConId}"
+                                           FontSize="11"
+                                           TextColor="Gray" />
+                                    <Label Text="{Binding PubDescription}"
+                                           FontSize="12"
+                                           MaxLines="2"
+                                           TextColor="Gray" />
+                                    <HorizontalStackLayout Spacing="8" Margin="0,4,0,0">
+                                        <Label Text="{Binding PubLocation}"
+                                               FontSize="10"
+                                               TextColor="#888" />
+                                        <Label Text="{Binding DonorName}"
+                                               FontSize="10"
+                                               FontAttributes="Italic"
+                                               TextColor="#888" />
                                     </HorizontalStackLayout>
                                 </VerticalStackLayout>
+
                             </Grid>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
+
             </CollectionView>
-        <!--</RefreshView>-->
+        </RefreshView>
+
     </Grid>
 
 </ContentPage>
