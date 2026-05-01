@@ -38,13 +38,7 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
         }
 
         private string _imageBase64;
-        private ImageSource _previewImage;
-        public ImageSource PreviewImage
-        {
-            get => _previewImage;
-            set { _previewImage = value; OnPropertyChanged(nameof(HasImage)); }
-        }
-        public bool HasImage => _previewImage != null;
+        public void SetImageBase64(string base64) => _imageBase64 = base64;
 
 
         public List<ItemCondition> ItemConditions { get; } = new List<ItemCondition>
@@ -72,16 +66,35 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
             set { _selectedCategory = value; OnPropertyChanged(); }
         }        
 
-        public ICommand PickImageCommand { get; }
         public ICommand SubmitCommand { get; }
+        public ICommand ClearFormCommand { get; }
+
+        public Action OnFormCleared { get; set; }
+
+        private bool _isLoggedIn;
+        public bool IsLoggedIn
+        {
+            get => _isLoggedIn;
+            set { _isLoggedIn = value; OnPropertyChanged(); OnPropertyChanged(nameof(IsNotLoggedIn)); }
+        }
+        public bool IsNotLoggedIn => !_isLoggedIn;
 
         public AddPublicationViewModel()
         {
             _apiService = new ApiService();
-            PickImageCommand = new Command(async () => await ExecutePickImage());
             SubmitCommand = new Command(async () => await ExecuteSubmit());
-            Task.Run(async () => await LoadCategoriesAsync());
+            ClearFormCommand = new Command(ExecuteClearForm);
 
+            IsLoggedIn = Preferences.Get("user_id", 0) > 0;
+            if (IsLoggedIn)
+                Task.Run(async () => await LoadCategoriesAsync());
+        }
+
+        public void RefreshLoginState()
+        {
+            IsLoggedIn = Preferences.Get("user_id", 0) > 0;
+            if (IsLoggedIn && Categories.Count == 0)
+                Task.Run(async () => await LoadCategoriesAsync());
         }
 
         private async Task LoadCategoriesAsync()
@@ -95,25 +108,15 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
             });
         }
 
-        private async Task ExecutePickImage()
+        private void ExecuteClearForm()
         {
-            try
-            {
-                var result = await MediaPicker.Default.PickPhotoAsync();
-                if (result == null) return;
-
-                using var stream = await result.OpenReadAsync();
-                using var ms = new MemoryStream();
-                await stream.CopyToAsync(ms);
-                byte[] bytes = ms.ToArray();
-
-                _imageBase64 = $"data:{result.ContentType};base64,{Convert.ToBase64String(bytes)}";
-                PreviewImage = ImageSource.FromStream(() => new MemoryStream(bytes));
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"[PickImage Error]: {ex.Message}");
-            }
+            Title = string.Empty;
+            Description = string.Empty;
+            Location = string.Empty;
+            SelectedCategory = null;
+            SelectedCondition = null;
+            _imageBase64 = null;
+            OnFormCleared?.Invoke();
         }
 
         private async Task ExecuteSubmit()
@@ -172,7 +175,7 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
                 {
                     await Application.Current.MainPage.DisplayAlert(
                         "Succès", "Votre annonce a été publiée !", "OK");
-                    await Shell.Current.GoToAsync("..");
+                    ExecuteClearForm();
                 }
                 else
                 {

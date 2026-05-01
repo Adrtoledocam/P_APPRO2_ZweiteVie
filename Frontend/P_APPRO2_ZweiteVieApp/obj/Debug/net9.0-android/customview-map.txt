@@ -35,6 +35,7 @@ item;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_Zwei
 item;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\158\jl\res\values\styles.xml
 item;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\158\jl\res\values-v35\styles.xml
 item;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\162\jl\res\values\values.xml
+item;obj\Debug\net9.0-android\res\values\styles.xml
 item;obj\Debug\net9.0-android\resizetizer\sp\drawable\maui_splash_image.xml
 item;obj\Debug\net9.0-android\resizetizer\sp\drawable-v31\maui_splash_image.xml
 layer-list;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\158\jl\res\drawable\maui_splash.xml
@@ -53,6 +54,7 @@ resources;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2
 resources;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\158\jl\res\values-v35\styles.xml
 resources;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\162\jl\res\values\values.xml
 resources;obj\Debug\net9.0-android\res\values\colors.xml
+resources;obj\Debug\net9.0-android\res\values\styles.xml
 resources;obj\Debug\net9.0-android\resizetizer\sp\values\maui_colors.xml
 set;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\156\jl\res\anim\enterfromleft.xml
 set;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\156\jl\res\anim\enterfromright.xml
@@ -68,6 +70,7 @@ string;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_Zw
 string;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\157\jl\res\values\values.xml
 style;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\158\jl\res\values\styles.xml
 style;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\158\jl\res\values-v35\styles.xml
+style;obj\Debug\net9.0-android\res\values\styles.xml
 translate;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\156\jl\res\anim\enterfromleft.xml
 translate;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\156\jl\res\anim\enterfromright.xml
 translate;C:\Users\pq17tmn\Documents\GitHub\P_APPRO2_ZweiteVie\Frontend\P_APPRO2_ZweiteVieApp\obj\Debug\net9.0-android\lp\156\jl\res\anim\exittoleft.xml

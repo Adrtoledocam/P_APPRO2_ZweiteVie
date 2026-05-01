@@ -14,54 +14,98 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
     {
         private readonly ApiService _apiService;
 
-        public ObservableCollection<Publication> Publications { get; set; }
+        public ObservableCollection<Publication> Publications { get; } = new ObservableCollection<Publication>();
 
         private string _searchQuery;
         public string SearchQuery
         {
             get => _searchQuery;
-            set { _searchQuery = value; OnPropertyChanged(); }
+            set
+            {
+                var previous = _searchQuery;
+                _searchQuery = value;
+                OnPropertyChanged();
+                if (!string.IsNullOrEmpty(previous) && string.IsNullOrEmpty(value))
+                    Task.Run(async () => await LoadPublicationsAsync());
+            }
         }
 
+        private bool _isRefreshing;
+        public bool IsRefreshing
+        {
+            get => _isRefreshing;
+            set { _isRefreshing = value; OnPropertyChanged(); }
+        }
 
         public ICommand RefreshCommand { get; }
         public ICommand SearchCommand { get; }
+        public ICommand SelectPublicationCommand { get; }
+        public ICommand AddToFavoritesCommand { get; }
 
-        public ICommand SelectPublicationCommand => new Command<Publication>(async (pub) =>
-        {
-            var param = new Dictionary<string, object> { { "SelectedPublication", pub } };
-            await Shell.Current.GoToAsync("PublicationDetailPage", param);
-        });
         public MainViewModel()
         {
             _apiService = new ApiService();
-            RefreshCommand = new Command(async () => await LoadPublicationsAsync());
-            SearchCommand = new Command(async () => await LoadPublicationsAsync(SearchQuery));
+            RefreshCommand = new Command(async () => await LoadPublicationsAsync(showSpinner: true));
+            SearchCommand = new Command(async () => await LoadPublicationsAsync(search: SearchQuery));
+
+            SelectPublicationCommand = new Command<Publication>(async (pub) =>
+            {
+                var param = new Dictionary<string, object>
+                {
+                    { "PubId", pub.PubId },
+                    { "IsFav", pub.IsFavorited }
+                };
+                await Shell.Current.GoToAsync("PublicationDetailPage", param);
+            });
+
+            AddToFavoritesCommand = new Command<Publication>(async (pub) =>
+            {
+                var token = await SecureStorage.GetAsync("auth_token");
+                if (string.IsNullOrEmpty(token))
+                {
+                    await Application.Current.MainPage.DisplayAlert("Non connecté", "Connectez-vous pour gérer vos favoris.", "OK");
+                    return;
+                }
+                if (pub.IsFavorited)
+                {
+                    bool success = await _apiService.RemoveFromFavoritesAsync(pub.PubId, token);
+                    if (success) pub.IsFavorited = false;
+                }
+                else
+                {
+                    bool success = await _apiService.AddToFavoritesAsync(pub.PubId, token);
+                    if (success) pub.IsFavorited = true;
+                }
+            });
 
             Task.Run(async () => await LoadPublicationsAsync());
         }
 
-        public async Task LoadPublicationsAsync(string search = "")
+        public async Task LoadPublicationsAsync(string search = "", bool showSpinner = false)
         {
-            if (IsBusy) return;
+            if (IsBusy)
+            {
+                IsRefreshing = false;
+                return;
+            }
 
             IsBusy = true;
+            if (showSpinner) IsRefreshing = true;
+
             try
             {
-                var items = await _apiService.GetPublicationsAsync();
+                var items = await _apiService.GetPublicationsAsync(search);
 
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
-                    if (Publications == null)
-                        Publications = new ObservableCollection<Publication>();
-
-                    Publications.Clear(); // Es mejor limpiar antes de recargar
-
+                    Publications.Clear();
                     foreach (var item in items)
-                    {
                         Publications.Add(item);
-                    }
+                    IsRefreshing = false;
                 });
+
+                if (Preferences.Get("user_id", 0) > 0)
+                    _ = MarkFavoritesAsync();
             }
             catch (Exception ex)
             {
@@ -70,7 +114,24 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
             finally
             {
                 IsBusy = false;
+                IsRefreshing = false;
             }
+        }
+        private async Task MarkFavoritesAsync()
+        {
+            try
+            {
+                var token = await SecureStorage.GetAsync("auth_token");
+                if (string.IsNullOrEmpty(token)) return;
+                var favs = await _apiService.GetMyFavoritesAsync(token);
+                var favIds = new HashSet<int>(favs.Select(f => f.PubId));
+                MainThread.BeginInvokeOnMainThread(() =>
+                {
+                    foreach (var pub in Publications)
+                        pub.IsFavorited = favIds.Contains(pub.PubId);
+                });
+            }
+            catch { }
         }
     }
 }

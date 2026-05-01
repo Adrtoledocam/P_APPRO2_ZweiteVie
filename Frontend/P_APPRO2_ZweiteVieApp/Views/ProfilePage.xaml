@@ -3,66 +3,242 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:P_APPRO2_ZweiteVieApp.ViewModels"
              x:Class="P_APPRO2_ZweiteVieApp.Views.ProfilePage"
-             Title="Mon Profil">
+             Title="Profil">
 
-    <ScrollView>
-        <VerticalStackLayout           
-            Padding="10"
-            Spacing="10"        
-            VerticalOptions="Center">
+    <Grid>
 
-            <Image Source="logo.png" HeightRequest="100" HorizontalOptions="Center"  />
-
-
-            <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
-                <Label Text="Utilisateur" 
-       FontAttributes="Bold" 
-       HorizontalOptions="Center"/>
-                <Label Text="{Binding CurrentUser.UseName}" 
-                       FontAttributes="Bold" 
-                       HorizontalOptions="Center"/>
-                <Label Text="E-mail" 
-FontAttributes="Bold" 
-HorizontalOptions="Center"/>
-                <Label Text="{Binding CurrentUser.UseEmail}" 
-                       TextColor="Gray" 
-                       HorizontalOptions="Center"/>
-                <Label Text="Telephone " 
-FontAttributes="Bold" 
-HorizontalOptions="Center"/>
-                <Label Text="{Binding CurrentUser.UsePhone}" 
-                       TextColor="Gray" 
-                       HorizontalOptions="Center"/>
-            </VerticalStackLayout>
-
-            <HorizontalStackLayout HorizontalOptions="Center" Spacing="30" Margin="0,10">
-                <VerticalStackLayout HorizontalOptions="Center">
-                    <Label Text="{Binding CurrentUser.TotalPubs}" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#008F39"/>
-                    <Label Text="Annonces" FontSize="12" TextColor="Gray"/>
-                </VerticalStackLayout>
-
-                <VerticalStackLayout HorizontalOptions="Center">
-                    <Label Text="{Binding CurrentUser.TotalDonated}" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#008F39"/>
-                    <Label Text="Donnés" FontSize="12" TextColor="Gray"/>
-                </VerticalStackLayout>
-
-                <VerticalStackLayout HorizontalOptions="Center">
-                    <Label Text="{Binding CurrentUser.TotalCo2, StringFormat='{0}kg'}" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#008F39"/>
-                    <Label Text="CO2 Sauvé" FontSize="12" TextColor="Gray"/>
-                </VerticalStackLayout>
-            </HorizontalStackLayout>
-
-            <BoxView HeightRequest="1" Color="#EEEEEE" />
-
-            <Button Text="Se déconnecter" 
-                    Command="{Binding LogoutCommand}"
-                    BackgroundColor="Transparent"
-                    TextColor="Black"
-                    BorderColor="Black"
-                    BorderWidth="1"
-                    CornerRadius="5"
-                    HorizontalOptions="Center" />
+        <!-- Overlay invité -->
+        <VerticalStackLayout IsVisible="{Binding IsNotLoggedIn}"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Spacing="16"
+                             Padding="40,0">
+            <Label Text="🔒" FontSize="56" HorizontalOptions="Center"/>
+            <Label Text="Connectez-vous pour accéder à votre profil"
+                   HorizontalOptions="Center"
+                   TextColor="Gray"
+                   FontSize="15"
+                   HorizontalTextAlignment="Center"/>
+            <Button Text="Se connecter"
+                    BackgroundColor="#008F39"
+                    TextColor="White"
+                    CornerRadius="12"
+                    HeightRequest="52"
+                    FontAttributes="Bold"
+                    Clicked="OnGoToLoginClicked"
+                    Margin="0,8,0,0"/>
         </VerticalStackLayout>
-    </ScrollView>
-    
+
+        <!-- Contenu profil (connecté) -->
+        <ScrollView IsVisible="{Binding IsLoggedIn}">
+            <VerticalStackLayout Padding="16" Spacing="16">
+
+                <!-- ── Carte profil ── -->
+                <Frame CornerRadius="16" BorderColor="#EEEEEE" HasShadow="True" Padding="16" BackgroundColor="White">
+                    <VerticalStackLayout Spacing="14">
+
+                        <!-- Avatar + Nom + Bouton édition -->
+                        <Grid ColumnDefinitions="Auto, *, Auto" VerticalOptions="Center">
+                            <Frame Grid.Column="0"
+                                   CornerRadius="35" HeightRequest="70" WidthRequest="70"
+                                   BackgroundColor="#E0E0E0" BorderColor="#CCCCCC"
+                                   Padding="0" IsClippedToBounds="True">
+                                <Label Text="👤" FontSize="34"
+                                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Frame>
+
+                            <Label Grid.Column="1"
+                                   Text="{Binding UserName}"
+                                   FontSize="18" FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   Margin="12,0,0,0"/>
+
+                            <Frame Grid.Column="2"
+                                   CornerRadius="8" HeightRequest="38" WidthRequest="38"
+                                   BorderColor="#008F39" BackgroundColor="White"
+                                   Padding="0">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding EditProfileCommand}"/>
+                                </Frame.GestureRecognizers>
+                                <Label Text="✏️" FontSize="16"
+                                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </Frame>
+                        </Grid>
+
+                        <BoxView HeightRequest="1" Color="#EEEEEE" Margin="0,2"/>
+
+                        <!-- Email -->
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="✉" FontSize="16" TextColor="#555" VerticalOptions="Center"/>
+                            <Label Text="{Binding UserEmail}"
+                                   FontSize="14" TextColor="#444" VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+
+                        <!-- Téléphone -->
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="📞" FontSize="16" VerticalOptions="Center"/>
+                            <Label Text="{Binding UserPhone}"
+                                   FontSize="14" TextColor="#444" VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+
+                        <!-- Bouton partager -->
+                        <Button Text="⬡  Partager Profil"
+                                Command="{Binding ShareProfileCommand}"
+                                BackgroundColor="White"
+                                TextColor="#008F39"
+                                BorderColor="#008F39"
+                                BorderWidth="1.5"
+                                CornerRadius="10"
+                                HeightRequest="44"
+                                Margin="0,4,0,0"/>
+
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- ── Votre impact ── -->
+                <Label Text="Votre impact"
+                       FontSize="17" FontAttributes="Bold"
+                       Margin="4,0,0,0"/>
+
+                <Grid ColumnDefinitions="*, *, *" ColumnSpacing="10">
+
+                    <Frame Grid.Column="0"
+                           BackgroundColor="#FFF9C4" BorderColor="Transparent"
+                           CornerRadius="14" Padding="12,14">
+                        <VerticalStackLayout Spacing="6">
+                            <Label Text="Publications"
+                                   FontSize="11" TextColor="#7D6200" FontAttributes="Bold"/>
+                            <Label Text="{Binding UserTotalPubs, StringFormat='✦{0}'}"
+                                   FontSize="24" FontAttributes="Bold" TextColor="#7D6200"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame Grid.Column="1"
+                           BackgroundColor="#E8F5E9" BorderColor="Transparent"
+                           CornerRadius="14" Padding="12,14">
+                        <VerticalStackLayout Spacing="6">
+                            <Label Text="Objets recyclés"
+                                   FontSize="11" TextColor="#1B5E20" FontAttributes="Bold"/>
+                            <Label Text="{Binding UserTotalDonated}"
+                                   FontSize="24" FontAttributes="Bold" TextColor="#1B5E20"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame Grid.Column="2"
+                           BackgroundColor="#E3F2FD" BorderColor="Transparent"
+                           CornerRadius="14" Padding="12,14">
+                        <VerticalStackLayout Spacing="6">
+                            <Label Text="CO₂ Économisé"
+                                   FontSize="11" TextColor="#0D47A1" FontAttributes="Bold"/>
+                            <Label Text="{Binding UserTotalCo2, StringFormat='↗{0}kg'}"
+                                   FontSize="22" FontAttributes="Bold" TextColor="#0D47A1"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                </Grid>
+
+                <!-- ── Mes publications ── -->
+                <Label Text="Mes publications"
+                       FontSize="17" FontAttributes="Bold"
+                       Margin="4,4,0,0"/>
+
+                <CollectionView ItemsSource="{Binding MyPublications}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical"
+                                         Span="2"
+                                         HorizontalItemSpacing="10"
+                                         VerticalItemSpacing="10"/>
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.EmptyView>
+                        <Label Text="Aucune publication pour l'instant."
+                               TextColor="Gray" HorizontalOptions="Center"
+                               Margin="0,20,0,0"/>
+                    </CollectionView.EmptyView>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame CornerRadius="12" Padding="0"
+                                   BorderColor="#EEEEEE" HasShadow="True"
+                                   IsClippedToBounds="True">
+                                <Grid RowDefinitions="110, Auto">
+
+                                    <Image Grid.Row="0"
+                                           Source="{Binding PubImage}"
+                                           Aspect="AspectFill"
+                                           HeightRequest="110"/>
+
+                                    <!-- Edit button — top left -->
+                                    <Frame Grid.Row="0"
+                                           BackgroundColor="#AA000000"
+                                           CornerRadius="0" Padding="0"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Start"
+                                           Margin="6,6,0,0"
+                                           WidthRequest="32" HeightRequest="32"
+                                           BorderColor="Transparent">
+                                        <Label Text="✏️" FontSize="16"
+                                               HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    </Frame>
+
+                                    <!-- Delete button — top right -->
+                                    <Frame Grid.Row="0"
+                                           BackgroundColor="#AA000000"
+                                           CornerRadius="0" Padding="0"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Start"
+                                           Margin="0,6,6,0"
+                                           WidthRequest="32" HeightRequest="32"
+                                           BorderColor="Transparent">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ProfileViewModel}}, Path=DeletePublicationCommand}"
+                                                CommandParameter="{Binding .}"/>
+                                        </Frame.GestureRecognizers>
+                                        <Label Text="🗑" FontSize="16"
+                                               HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    </Frame>
+
+                                    <VerticalStackLayout Grid.Row="1" Padding="8,6" Spacing="4">
+                                        <Label Text="{Binding PubTitle}"
+                                               FontAttributes="Bold" FontSize="12"
+                                               MaxLines="1" LineBreakMode="TailTruncation"/>
+                                        <HorizontalStackLayout Spacing="4">
+                                            <Frame Padding="4,2" CornerRadius="4"
+                                                   BackgroundColor="#E8F5E9" BorderColor="Transparent">
+                                                <Label Text="{Binding CatName}"
+                                                       FontSize="9" TextColor="#008F39"/>
+                                            </Frame>
+                                            <Frame Padding="4,2" CornerRadius="4"
+                                                   BackgroundColor="#F5F5F5" BorderColor="Transparent">
+                                                <Label Text="{Binding ConName}"
+                                                       FontSize="9" TextColor="#555"/>
+                                            </Frame>
+                                        </HorizontalStackLayout>
+                                        <Label Text="{Binding PubCreatedAt, StringFormat='{0:dd/MM/yy}'}"
+                                               FontSize="9" TextColor="#AAA"/>
+                                    </VerticalStackLayout>
+
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- ── Bouton déconnexion ── -->
+                <Button Text="↪  Se déconnecter"
+                        Command="{Binding LogoutCommand}"
+                        BackgroundColor="#FF3B30"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="17"
+                        CornerRadius="14"
+                        HeightRequest="60"
+                        Margin="0,16,0,8"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </Grid>
+
 </ContentPage>

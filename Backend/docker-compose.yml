@@ -37,6 +37,8 @@ services:
       dockerfile: nodejs.dockerfile
     container_name: backend-nodejs-1
     working_dir: /home/node/app
+    env_file:
+      - ./.env
     environment:
       NODE_ENV: development
     ports:

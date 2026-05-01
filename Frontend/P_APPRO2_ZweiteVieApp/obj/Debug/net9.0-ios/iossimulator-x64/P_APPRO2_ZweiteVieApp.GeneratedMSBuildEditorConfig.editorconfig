@@ -54,6 +54,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = P_APPRO2_ZweiteVieApp.View
 build_metadata.AdditionalFiles.TargetPath = Views\AddPublicationPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AddPublicationPage.xaml
 
+[C:/Users/pq17tmn/Documents/GitHub/P_APPRO2_ZweiteVie/Frontend/P_APPRO2_ZweiteVieApp/Views/FavoritesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = P_APPRO2_ZweiteVieApp.Views.FavoritesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\FavoritesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\FavoritesPage.xaml
+
 [C:/Users/pq17tmn/Documents/GitHub/P_APPRO2_ZweiteVie/Frontend/P_APPRO2_ZweiteVieApp/Views/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = P_APPRO2_ZweiteVieApp.Views.LoginPage.xaml

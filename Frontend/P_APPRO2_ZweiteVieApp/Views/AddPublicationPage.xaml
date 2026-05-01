@@ -3,51 +3,88 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="P_APPRO2_ZweiteVieApp.Views.AddPublicationPage"
              Title="Nouvelle Annonce">
-    <ScrollView Padding="20">
+    <Grid>
+
+        <!-- Guest overlay -->
+        <VerticalStackLayout IsVisible="{Binding IsNotLoggedIn}"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Spacing="16"
+                             Padding="40,0">
+            <Label Text="🔒" FontSize="56" HorizontalOptions="Center"/>
+            <Label Text="Connectez-vous pour publier une annonce"
+                   HorizontalOptions="Center"
+                   TextColor="Gray"
+                   FontSize="15"
+                   HorizontalTextAlignment="Center"/>
+            <Button Text="Se connecter"
+                    BackgroundColor="#008F39"
+                    TextColor="White"
+                    CornerRadius="12"
+                    HeightRequest="52"
+                    FontAttributes="Bold"
+                    Clicked="OnGoToLoginClicked"
+                    Margin="0,8,0,0"/>
+        </VerticalStackLayout>
+
+        <!-- Form (visible only when logged in) -->
+        <ScrollView IsVisible="{Binding IsLoggedIn}" Padding="20">
         <VerticalStackLayout Spacing="15">
 
             <Label Text="Titre" FontAttributes="Bold" />
-            <Entry Placeholder="Ex: Table en bois, Vélo enfant..."
+            <Entry x:Name="TitleEntry"
+                   Placeholder="Ex: Table en bois, Vélo enfant..."
                    Text="{Binding Title}" />
 
             <Label Text="Catégorie" FontAttributes="Bold" Margin="0,5,0,0"/>
-            <Picker Title="Choisir une catégorie"
+            <Picker x:Name="CategoryPicker"
+                    Title="Choisir une catégorie"
                     ItemsSource="{Binding Categories}"
                     ItemDisplayBinding="{Binding CatName}"
                     SelectedItem="{Binding SelectedCategory}" />
 
             <Label Text="État du produit" FontAttributes="Bold" />
-            <Picker Title="Quel est l'état ?"
+            <Picker x:Name="ConditionPicker"
+                    Title="Quel est l'état ?"
                     ItemsSource="{Binding ItemConditions}"
                     ItemDisplayBinding="{Binding ConName}"
                     SelectedItem="{Binding SelectedCondition}" />
 
             <Label Text="Description" FontAttributes="Bold" />
-            <Editor Placeholder="Décrivez l'objet (dimensions, défauts, historique...)"
+            <Editor x:Name="DescriptionEditor"
+                    Placeholder="Décrivez l'objet (dimensions, défauts, historique...)"
                     Text="{Binding Description}"
                     HeightRequest="100" />
 
             <Label Text="Localisation" FontAttributes="Bold" />
-            <Entry Placeholder="Ex: Lausanne 1004"
+            <Entry x:Name="LocationEntry"
+                   Placeholder="Ex: Lausanne 1004"
                    Text="{Binding Location}" />
 
             <Label Text="Photo" FontAttributes="Bold" Margin="0,5,0,0"/>
-            <Button Text="Choisir une photo"
-                    Command="{Binding PickImageCommand}"
+            <Button Text="📷  Prendre une photo ou choisir depuis la galerie"
+                    Clicked="OnPickPhotoClicked"
                     BackgroundColor="Transparent"
                     TextColor="#008F39"
                     BorderColor="#008F39"
                     BorderWidth="1"
                     CornerRadius="8" />
 
-            <Frame IsVisible="{Binding HasImage}"
-                   Padding="0"
+            <Frame Padding="0"
                    CornerRadius="10"
                    BorderColor="#DDDDDD"
-                   HasShadow="False">
-                <Image Source="{Binding PreviewImage}"
-                       HeightRequest="220"
-                       Aspect="AspectFit" />
+                   HasShadow="False"
+                   HeightRequest="220">
+                <Grid>
+                    <Label x:Name="NoPhotoLabel"
+                           Text="Aucune photo sélectionnée"
+                           TextColor="Gray"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                    <Image x:Name="PreviewImage"
+                           IsVisible="False"
+                           Aspect="AspectFill"/>
+                </Grid>
             </Frame>
             <Button Text="PUBLIER L'ANNONCE"
                     Command="{Binding SubmitCommand}"
@@ -58,6 +95,17 @@
                     CornerRadius="10"
                     Margin="0,20,0,0" />
 
+            <Button Text="Réinitialiser le formulaire"
+                    Command="{Binding ClearFormCommand}"
+                    BackgroundColor="Transparent"
+                    TextColor="Gray"
+                    BorderColor="#CCCCCC"
+                    BorderWidth="1"
+                    CornerRadius="10"
+                    Margin="0,5,0,20" />
+
         </VerticalStackLayout>
-    </ScrollView>
+        </ScrollView>
+
+    </Grid>
 </ContentPage>

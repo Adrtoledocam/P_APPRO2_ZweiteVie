@@ -5,20 +5,15 @@ const router = express.Router();
 
 router.get('/', getPublications);
 
-router.get('/:id', getPublicationById);
-
-
-// POST /api/publications 
-router.post('/', verifyToken, createPublication);
-
-// PUT /api/publications/:id 
-router.put('/:id', verifyToken, updatePublication);
-
-
-// GET /api/my/all
+// Routes spécifiques AVANT /:id pour éviter les conflits de routing
 router.get('/user/mine', verifyToken, getMyPublications);
 
-// DELETE 
+router.get('/:id', getPublicationById);
+
+router.post('/', verifyToken, createPublication);
+
+router.put('/:id', verifyToken, updatePublication);
+
 router.delete('/:id', verifyToken, deletePublication);
 
 export default router;

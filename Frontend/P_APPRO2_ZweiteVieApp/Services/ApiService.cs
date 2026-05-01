@@ -15,12 +15,12 @@ namespace P_APPRO2_ZweiteVieApp.Services
     {
         private readonly HttpClient _httpClient;
         private const string _baseUrl = "http://10.0.2.2:8080/api/";
-        //private const string _baseUrl = "http://10.195.74.6/api/" ; 
-        //private const string _baseUrl = " http://127.0.0.1:4040/api/";
-        //private const string _baseUrl = " https://climant-esthetically-laraine.ngrok-free.dev/api/";
+        //private const string _baseUrl = "http://localhost:8080/api/";
+        //private const string _baseUrl = "http://10.11.18.6:8080/api/";
         public ApiService()
         {
             _httpClient = new HttpClient();
+            _httpClient.Timeout = TimeSpan.FromSeconds(8);
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
@@ -32,10 +32,8 @@ namespace P_APPRO2_ZweiteVieApp.Services
         }
         public async Task<LoginResponse> LoginAsync(string email, string password)
         {
-            var loginData = new {email, password };
-            //var json = JsonConvert.SerializeObject(loginData);
-            var content = Serialize(loginData); 
-            //var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var loginData = new { email, password };
+            var content = Serialize(loginData);
 
             try
             {
@@ -43,8 +41,6 @@ namespace P_APPRO2_ZweiteVieApp.Services
                 if (response.IsSuccessStatusCode)
                 {
                     var result = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine($"[DEBUG] JSON Recibido: {result}");
-
                     var json = JObject.Parse(result);
 
                     return new LoginResponse
@@ -52,20 +48,12 @@ namespace P_APPRO2_ZweiteVieApp.Services
                         Token = json["token"]?.ToString(),
                         User = new User
                         {
-                            // Mapeamos según el JSON de tu Postman
                             UseId = json["user"]?["id"]?.Value<int>() ?? 0,
                             UseName = json["user"]?["username"]?.ToString(),
                             UseEmail = json["user"]?["email"]?.ToString()
                         }
                     };
-
-                    var token = json["token"]?.ToString();
-                    //return token;
-                    //var data = JsonConvert.DeserializeObject<Dictionary<string, string>>(result);
-                    //return data["token"];
                 }
-                var errorBody = await response.Content.ReadAsStringAsync();
-                Console.WriteLine($"[LoginAsync] Échec {response.StatusCode}: {errorBody}");
                 return null;
             }
             catch (Exception ex)
@@ -106,20 +94,6 @@ namespace P_APPRO2_ZweiteVieApp.Services
                     TotalDonated = result.Stats?.TotalDonated ?? 0,
                     TotalCo2 = result.Stats?.TotalCo2 ?? 0
                 };
-
-                /*
-                var wrapper = JsonConvert.DeserializeObject<UserStatsResponse>(json);
-                if (wrapper == null) return null;
-
-                return new User
-                {
-                    UseName = wrapper.Profile?.UseName,
-                    UseEmail = wrapper.Profile?.UseEmail,
-                    UsePhone = wrapper.Profile?.UsePhone,
-                    TotalPubs = wrapper.Stats?.TotalPubs ?? 0,
-                    TotalDonated = wrapper.Stats?.TotalDonated ?? 0,
-                    TotalCo2 = wrapper.Stats?.TotalCo2 ?? 0
-                };*/
             }
             catch (Exception ex)
             {
@@ -170,6 +144,27 @@ namespace P_APPRO2_ZweiteVieApp.Services
             return new List<Publication>();
         }
 
+        public async Task<Publication> GetPublicationByIdAsync(int pubId, string token = null)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(token))
+                    SetAuthHeader(token);
+
+                var response = await _httpClient.GetAsync($"{_baseUrl}publications/{pubId}");
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<Publication>(json);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[Error GetPublicationById]: {ex.Message}");
+            }
+            return null;
+        }
+
         public async Task<bool> CreatePublicationAsync(string token, string title, string description, int conId, string location, int catId, string imageBase64)
         {
 
@@ -189,6 +184,40 @@ namespace P_APPRO2_ZweiteVieApp.Services
             }
         }
 
+        public async Task<List<Publication>> GetMyPublicationsAsync(string token)
+        {
+            try
+            {
+                SetAuthHeader(token);
+                var response = await _httpClient.GetAsync($"{_baseUrl}publications/user/mine");
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<List<Publication>>(json);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[Error GetMyPublications]: {ex.Message}");
+            }
+            return new List<Publication>();
+        }
+
+        public async Task<bool> DeletePublicationAsync(int pubId, string token)
+        {
+            try
+            {
+                SetAuthHeader(token);
+                var response = await _httpClient.DeleteAsync($"{_baseUrl}publications/{pubId}");
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[Error DeletePublication]: {ex.Message}");
+                return false;
+            }
+        }
+
         //Favoris
         public async Task<bool> AddToFavoritesAsync(int pubId, string token)
         {
@@ -196,6 +225,21 @@ namespace P_APPRO2_ZweiteVieApp.Services
             var content = Serialize(new { pubId });
             var response = await _httpClient.PostAsync($"{_baseUrl}favorites", content);
             return response.IsSuccessStatusCode;
+        }
+
+        public async Task<bool> RemoveFromFavoritesAsync(int pubId, string token)
+        {
+            try
+            {
+                SetAuthHeader(token);
+                var response = await _httpClient.DeleteAsync($"{_baseUrl}favorites/{pubId}");
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[Error RemoveFavorite]: {ex.Message}");
+                return false;
+            }
         }
 
         public async Task<List<Publication>> GetMyFavoritesAsync(string token)

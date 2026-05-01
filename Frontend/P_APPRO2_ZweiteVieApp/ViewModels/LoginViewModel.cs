@@ -61,6 +61,7 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
                     Preferences.Set("user_name", loginResult.User.UseName);
                     Preferences.Set("user_email", loginResult.User.UseEmail);
 
+                    await Application.Current.MainPage.DisplayAlert("✓ Connexion réussie", $"Bienvenue, {loginResult.User.UseName} !", "Continuer");
                     await Shell.Current.GoToAsync("//MainPage");
                 }
                 else

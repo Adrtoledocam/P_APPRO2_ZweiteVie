@@ -3,21 +3,22 @@ import cloudinary from "../config/cloudinary.mjs";
 
 export const getPublications = async (req, res) => {
     try {
-        const {condition, search, catId } = req.query;
-        
+        const { conId, search, catId } = req.query;
+
         let query = `
-            SELECT p.*, c.catName, u.useName as donorName 
+            SELECT p.*, c.catName, u.useName as donorName, cond.conName
             FROM t_publication p
             JOIN t_category c ON p.catId = c.catId
             JOIN t_user u ON p.useId = u.useId
+            JOIN t_condition cond ON p.conId = cond.conId
             WHERE p.pubStatus = 'Disponible'
         `;
         const params = [];
 
-        // Filtre par condition (Neuf, Bon état, etc.)
-        if (condition) {
-            query += " AND p.pubCondition = ?";
-            params.push(condition);
+        // Filtre par condition (FK vers t_condition)
+        if (conId) {
+            query += " AND p.conId = ?";
+            params.push(conId);
         }
 
         // Filtre par catégorie
@@ -50,10 +51,11 @@ export const getPublicationById = async (req, res) => {
 
     try {
         const query = `
-            SELECT p.*, c.catName, u.useName as donorName, u.useEmail, u.usePhone
+            SELECT p.*, c.catName, u.useName as donorName, u.useEmail, u.usePhone, cond.conName
             FROM t_publication p
             JOIN t_category c ON p.catId = c.catId
             JOIN t_user u ON p.useId = u.useId
+            JOIN t_condition cond ON p.conId = cond.conId
             WHERE p.pubId = ?
         `;
         const [rows] = await pool.execute(query, [id]);
@@ -76,7 +78,12 @@ export const getPublicationById = async (req, res) => {
 export const getMyPublications = async (req, res) => {
     try {
         const [rows] = await pool.execute(
-            'SELECT * FROM t_publication WHERE useId = ? ORDER BY pubCreatedAt DESC',
+            `SELECT p.*, c.catName, cond.conName
+             FROM t_publication p
+             JOIN t_category c ON p.catId = c.catId
+             JOIN t_condition cond ON p.conId = cond.conId
+             WHERE p.useId = ?
+             ORDER BY p.pubCreatedAt DESC`,
             [req.user.id]
         );
         res.json(rows);
@@ -109,25 +116,25 @@ export const createPublication = async (req, res) => {
 
 export const updatePublication = async (req, res) => {
     const { id } = req.params;
-    const { title, description, condition, status, location } = req.body;
+    const { title, description, conId, status, location } = req.body;
     const userId = req.user.id;
     const isAdmin = req.user.isAdmin;
 
     try {
         const [pub] = await pool.execute('SELECT useId FROM t_publication WHERE pubId = ?', [id]);
-        
+
         if (pub.length === 0) return res.status(404).json({ message: "Annonce non trouvée" });
         if (pub[0].useId !== userId && !isAdmin) return res.status(403).json({ message: "Accès refusé" });
 
         await pool.execute(
-            `UPDATE t_publication 
-             SET pubTitle = COALESCE(?, pubTitle), 
-                 pubDescription = COALESCE(?, pubDescription), 
-                 pubCondition = COALESCE(?, pubCondition), 
-                 pubStatus = COALESCE(?, pubStatus), 
-                 pubLocation = COALESCE(?, pubLocation) 
+            `UPDATE t_publication
+             SET pubTitle = COALESCE(?, pubTitle),
+                 pubDescription = COALESCE(?, pubDescription),
+                 conId = COALESCE(?, conId),
+                 pubStatus = COALESCE(?, pubStatus),
+                 pubLocation = COALESCE(?, pubLocation)
              WHERE pubId = ?`,
-            [title, description, condition, status, location, id]
+            [title, description, conId, status, location, id]
         );
         res.json({ message: "Annonce mise à jour !" });
     } catch (err) {

@@ -58,7 +58,7 @@ export const login = async (req, res) => {
                 id: user.useId,
                 isAdmin: user.useIsAdmin,
             },
-            process.env.JWT_SECRET || "secret_key_toledoc",
+            process.env.JWT_SECRET,
             { expiresIn: "2h" }
         );
 

@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 
 namespace P_APPRO2_ZweiteVieApp.ViewModels
 {
-    public class BaseViewModel
+    public class BaseViewModel : INotifyPropertyChanged
     {
         private bool _isBusy;
         public bool IsBusy

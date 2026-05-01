@@ -1,13 +1,11 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace P_APPRO2_ZweiteVieApp.Models
 {
-    public class Publication
+    public class Publication : INotifyPropertyChanged
     {
         [JsonProperty("pubId")]
         public int PubId { get; set; }
@@ -19,7 +17,10 @@ namespace P_APPRO2_ZweiteVieApp.Models
         public string PubDescription { get; set; }
 
         [JsonProperty("conId")]
-        public string ConId { get; set; }
+        public int ConId { get; set; }
+
+        [JsonProperty("conName")]
+        public string ConName { get; set; }
 
         [JsonProperty("pubImage")]
         public string PubImage { get; set; }
@@ -44,5 +45,28 @@ namespace P_APPRO2_ZweiteVieApp.Models
 
         [JsonProperty("usePhone")]
         public string UsePhone { get; set; }
+
+        private bool _isFavorited;
+        public bool IsFavorited
+        {
+            get => _isFavorited;
+            set { _isFavorited = value; OnPropertyChanged(); OnPropertyChanged(nameof(IsNotFavorited)); }
+        }
+        public bool IsNotFavorited => !_isFavorited;
+
+        public string RelativeDate
+        {
+            get
+            {
+                var diff = DateTime.Now - PubCreatedAt;
+                if (diff.TotalDays >= 1) return $"{(int)diff.TotalDays} j";
+                if (diff.TotalHours >= 1) return $"{(int)diff.TotalHours} h";
+                return "maintenant";
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged([CallerMemberName] string name = null)
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
 }

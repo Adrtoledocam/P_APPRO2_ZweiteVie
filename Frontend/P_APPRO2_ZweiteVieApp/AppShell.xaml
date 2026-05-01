@@ -13,13 +13,16 @@
         Route="LoginPage"
         Shell.NavBarIsVisible="False"/>
     <TabBar>
-        <Tab Title="Catalogue" Icon="icon_catalog.png">
+        <Tab Title="Catalogue" Icon="icon_catalog.svg">
             <ShellContent ContentTemplate="{DataTemplate root:MainPage}" Route="MainPage" />
         </Tab>
-        <Tab Title="Publication" Icon="icon_profile.png">
+        <Tab Title="Favoris" Icon="icon_favorites.svg">
+            <ShellContent ContentTemplate="{DataTemplate views:FavoritesPage}" Route="FavoritesPage" />
+        </Tab>
+        <Tab Title="Publication" Icon="icon_add.svg">
             <ShellContent ContentTemplate="{DataTemplate views:AddPublicationPage}" Route="AddPublicationPage" />
         </Tab>
-        <Tab Title="Profil" Icon="icon_profile.png">
+        <Tab Title="Profil" Icon="icon_profile.svg">
             <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}" Route="ProfilePage" />
         </Tab>
     </TabBar>

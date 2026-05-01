@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:P_APPRO2_ZweiteVieApp.ViewModels"
+             x:Class="P_APPRO2_ZweiteVieApp.Views.FavoritesPage"
+             Title="Mes Favoris">
+
+    <Grid>
+
+        <!-- Message si non connecté -->
+        <VerticalStackLayout IsVisible="{Binding IsNotLoggedIn}"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Spacing="16"
+                             Padding="40,0">
+            <Label Text="🔒" FontSize="56" HorizontalOptions="Center"/>
+            <Label Text="Connectez-vous pour voir vos favoris"
+                   HorizontalOptions="Center"
+                   TextColor="Gray"
+                   FontSize="15"
+                   HorizontalTextAlignment="Center"/>
+            <Button Text="Se connecter"
+                    BackgroundColor="#008F39"
+                    TextColor="White"
+                    CornerRadius="12"
+                    HeightRequest="52"
+                    FontAttributes="Bold"
+                    Clicked="OnGoToLoginClicked"
+                    Margin="0,8,0,0"/>
+        </VerticalStackLayout>
+
+        <!-- Liste des favoris -->
+        <CollectionView IsVisible="{Binding IsLoggedIn}" ItemsSource="{Binding Favorites}">
+
+                <CollectionView.EmptyView>
+                    <Label Text="Aucun favori enregistré."
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Gray"
+                           Margin="0,40,0,0"/>
+                </CollectionView.EmptyView>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="12,6" Padding="12"
+                               HasShadow="True"
+                               CornerRadius="14"
+                               BorderColor="#EEEEEE"
+                               BackgroundColor="White">
+
+                            <VerticalStackLayout Spacing="7">
+
+                                <!-- Titre + date relative -->
+                                <Grid ColumnDefinitions="*, Auto">
+                                    <Label Grid.Column="0"
+                                           Text="{Binding PubTitle}"
+                                           FontAttributes="Bold" FontSize="15"
+                                           MaxLines="1" LineBreakMode="TailTruncation"
+                                           VerticalOptions="Center"/>
+                                    <Label Grid.Column="1"
+                                           Text="{Binding RelativeDate}"
+                                           FontSize="11" TextColor="#AAAAAA"
+                                           VerticalOptions="Center"/>
+                                </Grid>
+
+                                <!-- État -->
+                                <Label Text="{Binding ConName}"
+                                       FontSize="12" TextColor="#777"/>
+
+                                <!-- Tags -->
+                                <HorizontalStackLayout Spacing="6">
+                                    <Frame Padding="7,3" CornerRadius="8"
+                                           BackgroundColor="#E8F5E9" BorderColor="Transparent">
+                                        <Label Text="{Binding CatName}"
+                                               FontSize="10" TextColor="#008F39"/>
+                                    </Frame>
+                                    <Frame Padding="7,3" CornerRadius="8"
+                                           BackgroundColor="#F5F5F5" BorderColor="Transparent">
+                                        <Label Text="{Binding PubLocation}"
+                                               FontSize="10" TextColor="#555"/>
+                                    </Frame>
+                                </HorizontalStackLayout>
+
+                                <!-- Image -->
+                                <Frame Padding="0" CornerRadius="10"
+                                       IsClippedToBounds="True"
+                                       HeightRequest="190"
+                                       BorderColor="Transparent"
+                                       Margin="0,2">
+                                    <Image Source="{Binding PubImage}"
+                                           Aspect="AspectFill"
+                                           HorizontalOptions="Fill"/>
+                                </Frame>
+
+                                <!-- Contacter + Coeur -->
+                                <Grid ColumnDefinitions="*, Auto" Margin="0,2,0,0">
+                                    <Button Grid.Column="0"
+                                            Text="Contacter"
+                                            Clicked="OnContacterClicked"
+                                            BackgroundColor="#008F39"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            CornerRadius="10"
+                                            HeightRequest="44"
+                                            Margin="0,0,8,0"/>
+                                    <Frame Grid.Column="1"
+                                           CornerRadius="22" HeightRequest="44" WidthRequest="44"
+                                           BackgroundColor="#008F39" BorderColor="Transparent"
+                                           Padding="0" IsClippedToBounds="True">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:FavoritesViewModel}}, Path=RemoveFromFavoritesCommand}"
+                                                CommandParameter="{Binding .}"/>
+                                        </Frame.GestureRecognizers>
+                                        <Label Text="♥" FontSize="22"
+                                               TextColor="White"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+                                    </Frame>
+                                </Grid>
+
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+    </Grid>
+
+</ContentPage>

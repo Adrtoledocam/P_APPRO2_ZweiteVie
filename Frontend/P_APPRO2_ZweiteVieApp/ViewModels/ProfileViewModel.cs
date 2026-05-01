@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using P_APPRO2_ZweiteVieApp.Models;
 using P_APPRO2_ZweiteVieApp.Services;
-using System.Windows.Input;
 
 namespace P_APPRO2_ZweiteVieApp.ViewModels
 {
-    public class ProfileViewModel: BaseViewModel
+    public class ProfileViewModel : BaseViewModel
     {
         private readonly ApiService _apiService;
 
@@ -17,169 +15,207 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
         public User CurrentUser
         {
             get => _currentUser;
-            set { _currentUser = value; OnPropertyChanged(); }
+            set
+            {
+                _currentUser = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(UserPhone));
+                OnPropertyChanged(nameof(UserName));
+                OnPropertyChanged(nameof(UserEmail));
+                OnPropertyChanged(nameof(UserTotalPubs));
+                OnPropertyChanged(nameof(UserTotalDonated));
+                OnPropertyChanged(nameof(UserTotalCo2));
+            }
         }
 
-        private string _editName;
-        public string EditName
+        public string UserPhone    => _currentUser?.UsePhone ?? "Non renseigné";
+        public string UserName     => _currentUser?.UseName;
+        public string UserEmail    => _currentUser?.UseEmail;
+        public int    UserTotalPubs     => _currentUser?.TotalPubs ?? 0;
+        public int    UserTotalDonated  => _currentUser?.TotalDonated ?? 0;
+        public decimal UserTotalCo2    => _currentUser?.TotalCo2 ?? 0;
+
+        public ObservableCollection<Publication> MyPublications { get; } = new();
+
+        private bool _isLoggedIn;
+        public bool IsLoggedIn
         {
-            get => _editName;
-            set { _editName = value; OnPropertyChanged(); }
+            get => _isLoggedIn;
+            set { _isLoggedIn = value; OnPropertyChanged(); OnPropertyChanged(nameof(IsNotLoggedIn)); }
         }
+        public bool IsNotLoggedIn => !_isLoggedIn;
 
-        private string _editPhone;
-        public string EditPhone
+        private bool _isRefreshing;
+        public bool IsRefreshing
         {
-            get => _editPhone;
-            set { _editPhone = value; OnPropertyChanged(); }
+            get => _isRefreshing;
+            set { _isRefreshing = value; OnPropertyChanged(); }
         }
 
-        private string _statusMessage;
-        public string StatusMessage
-        {
-            get => _statusMessage;
-            set { _statusMessage = value; OnPropertyChanged(); }
-        }
-
-        public ICommand SaveProfileCommand { get; }
+        public ICommand EditProfileCommand { get; }
+        public ICommand ShareProfileCommand { get; }
         public ICommand LogoutCommand { get; }
-
+        public ICommand DeletePublicationCommand { get; }
+        public ICommand RefreshCommand { get; }
 
         public ProfileViewModel()
         {
             _apiService = new ApiService();
-            CurrentUser = new User {
-                UseName = Preferences.Get("user_name", "User"),
-                UseEmail = Preferences.Get("user_email", "Email"),
+            CurrentUser = new User
+            {
+                UseName = Preferences.Get("user_name", "Utilisateur"),
+                UseEmail = Preferences.Get("user_email", ""),
                 UseId = Preferences.Get("user_id", 0)
             };
-            SaveProfileCommand = new Command(async () => await ExecuteSaveProfile());
+
+            EditProfileCommand = new Command(async () => await ExecuteEditProfile());
+            ShareProfileCommand = new Command(async () => await ExecuteShareProfile());
             LogoutCommand = new Command(async () => await ExecuteLogout());
-            //Task.Run(async () => await LoadProfileAsync());
-            Task.Run(async () => await LoadUserDataAsync());
-            //_ = LoadUserDataAsync();
+            DeletePublicationCommand = new Command<Publication>(async (pub) => await ExecuteDeletePublication(pub));
+            RefreshCommand = new Command(async () =>
+            {
+                IsRefreshing = true;
+                try { await LoadUserDataAsync(); }
+                finally { IsRefreshing = false; }
+            });
+
+            IsLoggedIn = Preferences.Get("user_id", 0) > 0;
         }
 
-        private async Task LoadUserDataAsync()
+        public async Task LoadUserDataAsync()
         {
-            if (IsBusy) return;
-            IsBusy = true;
             try
             {
                 string token = await SecureStorage.GetAsync("auth_token");
                 if (string.IsNullOrEmpty(token)) return;
 
-                var user = await _apiService.GetMyProfileAsync(token);
+                var userTask = _apiService.GetMyProfileAsync(token);
+                var pubsTask = _apiService.GetMyPublicationsAsync(token);
+
+                await Task.WhenAll(userTask, pubsTask);
+
+                var user = userTask.Result;
+                var pubs = pubsTask.Result;
 
                 if (user != null)
                 {
-                    MainThread.BeginInvokeOnMainThread(() =>
-                    {
-                        CurrentUser = user;
-                        EditName = user.UseName;
-                        EditPhone = user.UsePhone;
-
-                        Preferences.Set("user_name", user.UseName);
-                    });
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"[ProfileViewModel] Error al cargar: {ex.Message}");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
-        }
-        /*
-        public async Task LoadProfileAsync()
-        {
-            if (IsBusy) return;
-            IsBusy = true;
-
-            try
-            {
-                string token = await SecureStorage.GetAsync("auth_token");
-                if (string.IsNullOrEmpty(token)) return;
-
-                var user = await _apiService.GetMyProfileAsync(token);
-
-                MainThread.BeginInvokeOnMainThread(() =>
-                {
                     CurrentUser = user;
+                    Preferences.Set("user_name", user.UseName ?? "");
+                }
 
-                    EditName = user?.UseName;
-                    EditPhone = user?.UsePhone;
-                });
+                MyPublications.Clear();
+                foreach (var p in pubs)
+                    MyPublications.Add(p);
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"[ProfileViewModel Error]: {ex.Message}");
             }
-            finally
+        }
+
+        private async Task ExecuteEditProfile()
+        {
+            string choice = await Application.Current.MainPage.DisplayActionSheet(
+                "Modifier le profil", "Annuler", null,
+                "✏️  Nom d'utilisateur", "📞  Numéro de téléphone");
+
+            if (choice == null || choice == "Annuler") return;
+
+            string token = await SecureStorage.GetAsync("auth_token");
+            if (string.IsNullOrEmpty(token)) return;
+
+            try
             {
-                IsBusy = false;
+                if (choice.Contains("Nom"))
+                {
+                    var newName = await Application.Current.MainPage.DisplayPromptAsync(
+                        "Modifier le nom", "Nouveau nom d'utilisateur",
+                        initialValue: CurrentUser?.UseName ?? "");
+                    if (string.IsNullOrWhiteSpace(newName)) return;
+
+                    bool ok = await _apiService.UpdateProfileAsync(token, newName, CurrentUser?.UsePhone ?? "");
+                    if (ok)
+                    {
+                        Preferences.Set("user_name", newName);
+                        await LoadUserDataAsync();
+                        await Application.Current.MainPage.DisplayAlert("✓", "Nom mis à jour !", "OK");
+                    }
+                }
+                else
+                {
+                    var newPhone = await Application.Current.MainPage.DisplayPromptAsync(
+                        "Modifier le téléphone", "Nouveau numéro (ex: +41 76 000 00 00)",
+                        initialValue: CurrentUser?.UsePhone ?? "",
+                        keyboard: Keyboard.Telephone);
+                    if (newPhone == null) return;
+
+                    bool ok = await _apiService.UpdateProfileAsync(token, CurrentUser?.UseName ?? "", newPhone);
+                    if (ok)
+                    {
+                        await LoadUserDataAsync();
+                        await Application.Current.MainPage.DisplayAlert("✓", "Téléphone mis à jour !", "OK");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[EditProfile Error]: {ex.Message}");
             }
         }
-        */
-        private async Task ExecuteSaveProfile()
+
+        private async Task ExecuteShareProfile()
         {
-            if (IsBusy) return;
-            IsBusy = true;
-            StatusMessage = string.Empty;
+            await Share.RequestAsync(new ShareTextRequest
+            {
+                Title = "Mon profil ZweiteVie",
+                Text = $"Découvrez le profil de {CurrentUser?.UseName} sur ZweiteVie !\n" +
+                       $"{CurrentUser?.TotalPubs} annonces · {CurrentUser?.TotalDonated} objets donnés · {CurrentUser?.TotalCo2}kg CO₂ économisé"
+            });
+        }
+
+        private async Task ExecuteDeletePublication(Publication pub)
+        {
+            if (pub == null) return;
+
+            bool confirm = await Application.Current.MainPage.DisplayAlert(
+                "Supprimer", $"Supprimer \"{pub.PubTitle}\" ?", "Oui", "Non");
+            if (!confirm) return;
 
             try
             {
                 string token = await SecureStorage.GetAsync("auth_token");
                 if (string.IsNullOrEmpty(token)) return;
 
-                bool success = await _apiService.UpdateProfileAsync(token, EditName, EditPhone);
-
-                MainThread.BeginInvokeOnMainThread(() =>
-                {
-                    if (success)
-                    {
-                        if (CurrentUser != null)
-                        {
-                            CurrentUser.UseName = EditName;
-                            CurrentUser.UsePhone = EditPhone;
-                            OnPropertyChanged(nameof(CurrentUser));
-                        }
-                        StatusMessage = "Profil mis à jour !";
-                    }
-                    else
-                    {
-                        StatusMessage = "Erreur lors de la mise à jour.";
-                    }
-                });
+                bool success = await _apiService.DeletePublicationAsync(pub.PubId, token);
+                if (success)
+                    MainThread.BeginInvokeOnMainThread(() => MyPublications.Remove(pub));
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[ProfileViewModel] ExecuteSaveProfile error: {ex.Message}");
-                StatusMessage = "Une erreur est survenue.";
-            }
-            finally
-            {
-                IsBusy = false;
+                Console.WriteLine($"[DeletePublication Error]: {ex.Message}");
             }
         }
-
 
         private async Task ExecuteLogout()
         {
-
             SecureStorage.Remove("auth_token");
             Preferences.Clear();
-            CurrentUser = null;
-
-            /**SecureStorage.Remove("auth_token");
-            Preferences.Remove("user_id");
-            Preferences.Remove("user_name");
-            Preferences.Remove("user_email");
-            Preferences.Clear();**/
-
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                IsLoggedIn = false;
+                MyPublications.Clear();
+                CurrentUser = GuestUser();
+            });
             await Shell.Current.GoToAsync("//LoginPage");
         }
+
+        public static User GuestUser() => new User
+        {
+            UseName = "Invité",
+            UseEmail = "invité@email.com",
+            TotalPubs = 0,
+            TotalDonated = 0,
+            TotalCo2 = 0
+        };
     }
 }

@@ -1,0 +1,13 @@
+# Variables de entorno — NUNCA commitear
+.env
+
+# Dependencias
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
