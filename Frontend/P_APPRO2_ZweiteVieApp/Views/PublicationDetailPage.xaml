@@ -8,7 +8,6 @@
         <ScrollView x:Name="ContentArea" IsVisible="False">
             <VerticalStackLayout Spacing="0">
 
-                <!-- Image + heart overlay -->
                 <Grid HeightRequest="280">
                     <Image Source="{Binding PubImage}"
                            HeightRequest="280"

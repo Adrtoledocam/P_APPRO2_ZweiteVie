@@ -24,7 +24,6 @@ namespace P_APPRO2_ZweiteVieApp.Services
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        //Authentification
         public class LoginResponse
         {
             public string Token { get; set; }
@@ -72,7 +71,6 @@ namespace P_APPRO2_ZweiteVieApp.Services
             return response.IsSuccessStatusCode;
         }
 
-        //Profil
         public async Task<User> GetMyProfileAsync(string token)
         {
             SetAuthHeader(token);
@@ -121,7 +119,6 @@ namespace P_APPRO2_ZweiteVieApp.Services
             }
         }
 
-        //PUBLICATIOns
         public async Task<List<Publication>> GetPublicationsAsync(string searchQuery = "")
         {
             try
@@ -235,7 +232,6 @@ namespace P_APPRO2_ZweiteVieApp.Services
             }
         }
 
-        //Favoris
         public async Task<bool> AddToFavoritesAsync(int pubId, string token)
         {
             SetAuthHeader(token);
@@ -272,7 +268,6 @@ namespace P_APPRO2_ZweiteVieApp.Services
             return new List<Publication>();
         }
 
-        //Categories
         public async Task<List<Category>> GetCategoriesAsync()
         {
             try

@@ -219,7 +219,7 @@
               "RelativeDocumentMoniker": "Views\\ProfilePage.xaml",
               "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\ProfilePage.xaml",
               "RelativeToolTip": "Views\\ProfilePage.xaml",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIQAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAIQAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-03-27T07:15:33.857Z",
               "EditorCaption": ""
@@ -234,8 +234,7 @@
               "RelativeToolTip": "Views\\ProfilePage.xaml.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T13:33:11.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T13:33:11.093Z"
             },
             {
               "$type": "Document",
@@ -247,8 +246,7 @@
               "RelativeToolTip": "ViewModels\\ProfileViewModel.cs",
               "ViewState": "AgIAAKAAAAAAAAAAAAAmwLAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T07:12:57.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T07:12:57.627Z"
             },
             {
               "$type": "Document",

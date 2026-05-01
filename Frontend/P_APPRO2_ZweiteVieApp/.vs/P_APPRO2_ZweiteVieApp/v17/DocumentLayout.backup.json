@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\views\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|solutionrelative:views\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26004FDD-5D76-43F9-B1C1-B79D26629001}|P_APPRO2_ZweiteVieApp.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro2_zweitevie\\frontend\\p_appro2_zweitevieapp\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -149,7 +149,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 123,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -213,19 +213,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ProfilePage.xaml",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\ProfilePage.xaml",
               "RelativeDocumentMoniker": "Views\\ProfilePage.xaml",
               "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\ProfilePage.xaml",
               "RelativeToolTip": "Views\\ProfilePage.xaml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAE8AAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAIQAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-27T07:15:33.857Z"
+              "WhenOpened": "2026-03-27T07:15:33.857Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ProfilePage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\Views\\ProfilePage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ProfilePage.xaml.cs",
@@ -233,12 +234,11 @@
               "RelativeToolTip": "Views\\ProfilePage.xaml.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T13:33:11.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T13:33:11.093Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ProfileViewModel.cs",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO2_ZweiteVie\\Frontend\\P_APPRO2_ZweiteVieApp\\ViewModels\\ProfileViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ProfileViewModel.cs",
@@ -246,8 +246,7 @@
               "RelativeToolTip": "ViewModels\\ProfileViewModel.cs",
               "ViewState": "AgIAAKAAAAAAAAAAAAAmwLAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T07:12:57.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T07:12:57.627Z"
             },
             {
               "$type": "Document",

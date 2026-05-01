@@ -37,7 +37,6 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
             set { _isRefreshing = value; OnPropertyChanged(); }
         }
 
-        public ICommand RefreshCommand { get; }
         public ICommand SearchCommand { get; }
         public ICommand SelectPublicationCommand { get; }
         public ICommand AddToFavoritesCommand { get; }
@@ -45,7 +44,6 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
         public MainViewModel()
         {
             _apiService = new ApiService();
-            RefreshCommand = new Command(async () => await LoadPublicationsAsync(showSpinner: true));
             SearchCommand = new Command(async () => await LoadPublicationsAsync(search: SearchQuery));
 
             SelectPublicationCommand = new Command<Publication>(async (pub) =>

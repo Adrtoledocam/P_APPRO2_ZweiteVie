@@ -33,7 +33,6 @@
 
                             <VerticalStackLayout Spacing="7">
 
-                                <!-- Titre + date relative -->
                                 <Grid ColumnDefinitions="*, Auto">
                                     <Label Grid.Column="0"
                                            Text="{Binding PubTitle}"
@@ -46,11 +45,9 @@
                                            VerticalOptions="Center"/>
                                 </Grid>
 
-                                <!-- État -->
                                 <Label Text="{Binding ConName}"
                                        FontSize="12" TextColor="#777"/>
 
-                                <!-- Tags -->
                                 <HorizontalStackLayout Spacing="6">
                                     <Frame Padding="7,3" CornerRadius="8"
                                            BackgroundColor="#E8F5E9" BorderColor="Transparent">
@@ -64,7 +61,6 @@
                                     </Frame>
                                 </HorizontalStackLayout>
 
-                                <!-- Image -->
                                 <Frame Padding="0" CornerRadius="10"
                                        IsClippedToBounds="True"
                                        HeightRequest="190"
@@ -75,7 +71,6 @@
                                            HorizontalOptions="Fill"/>
                                 </Frame>
 
-                                <!-- Contacter + Favori -->
                                 <Grid ColumnDefinitions="*, Auto" Margin="0,2,0,0">
                                     <Button Grid.Column="0"
                                             Text="Contacter"

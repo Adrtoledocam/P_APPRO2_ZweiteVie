@@ -15,19 +15,14 @@ export const getPublications = async (req, res) => {
         `;
         const params = [];
 
-        // Filtre par condition (FK vers t_condition)
         if (conId) {
             query += " AND p.conId = ?";
             params.push(conId);
         }
-
-        // Filtre par catégorie
         if (catId) {
             query += " AND p.catId = ?";
             params.push(catId);
         }
-
-        // Recherche par nom 
         if (search) {
             query += " AND p.pubTitle LIKE ?";
             params.push(`%${search}%`);
@@ -45,7 +40,6 @@ export const getPublications = async (req, res) => {
 
 export const getPublicationById = async (req, res) => {
     const { id } = req.params;
-    // On récupère le token du header s'il existe (sans bloquer via middleware)
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
 

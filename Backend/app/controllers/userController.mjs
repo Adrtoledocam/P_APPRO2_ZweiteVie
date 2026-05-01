@@ -27,21 +27,23 @@ export const updateProfile = async (req, res) => {
 
 export const getUserStats = async (req, res) => {
     try {
-        const query = `
+        const [rows] = await pool.execute(`
             SELECT
-                COUNT(*) as totalPubs,
+                u.useName, u.useEmail, u.usePhone,
+                COUNT(p.pubId) as totalPubs,
                 SUM(CASE WHEN p.pubStatus = 'Indisponible' THEN 1 ELSE 0 END) as totalDonated,
                 SUM(CASE WHEN p.pubStatus = 'Indisponible' THEN c.catCo2Impact ELSE 0 END) as totalCo2
-            FROM t_publication p
-            JOIN t_category c ON p.catId = c.catId
-            WHERE p.useId = ?
-        `;
-        const [stats] = await pool.execute(query, [req.user.id]);
-        const [user] = await pool.execute('SELECT useName, useEmail, usePhone FROM t_user WHERE useId = ?', [req.user.id]);
+            FROM t_user u
+            LEFT JOIN t_publication p ON u.useId = p.useId
+            LEFT JOIN t_category c ON p.catId = c.catId
+            WHERE u.useId = ?
+            GROUP BY u.useId
+        `, [req.user.id]);
 
+        const row = rows[0];
         res.json({
-            profile: user[0],
-            stats: stats[0]
+            profile: { useName: row.useName, useEmail: row.useEmail, usePhone: row.usePhone },
+            stats:   { totalPubs: row.totalPubs, totalDonated: row.totalDonated, totalCo2: row.totalCo2 }
         });
     } catch (err) {
         res.status(500).json({ error: "Erreur lors du calcul de l'impact." });
