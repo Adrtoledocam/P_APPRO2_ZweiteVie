@@ -53,6 +53,7 @@ namespace P_APPRO2_ZweiteVieApp.Models
             set { _isFavorited = value; OnPropertyChanged(); OnPropertyChanged(nameof(IsNotFavorited)); }
         }
         public bool IsNotFavorited => !_isFavorited;
+        public bool IsAvailable => PubStatus == "Disponible";
 
         public string RelativeDate
         {

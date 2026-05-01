@@ -28,10 +28,10 @@ export const updateProfile = async (req, res) => {
 export const getUserStats = async (req, res) => {
     try {
         const query = `
-            SELECT 
+            SELECT
                 COUNT(*) as totalPubs,
-                SUM(CASE WHEN p.pubStatus = 'Donné' THEN 1 ELSE 0 END) as totalDonated,
-                SUM(CASE WHEN p.pubStatus = 'Donné' THEN c.catCo2Impact ELSE 0 END) as totalCo2
+                SUM(CASE WHEN p.pubStatus = 'Indisponible' THEN 1 ELSE 0 END) as totalDonated,
+                SUM(CASE WHEN p.pubStatus = 'Indisponible' THEN c.catCo2Impact ELSE 0 END) as totalCo2
             FROM t_publication p
             JOIN t_category c ON p.catId = c.catId
             WHERE p.useId = ?

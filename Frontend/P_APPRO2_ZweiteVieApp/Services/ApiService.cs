@@ -203,6 +203,23 @@ namespace P_APPRO2_ZweiteVieApp.Services
             return new List<Publication>();
         }
 
+        public async Task<bool> MarkAsDonatedAsync(int pubId, string token)
+        {
+            try
+            {
+                SetAuthHeader(token);
+                var response = await _httpClient.PatchAsync($"{_baseUrl}publications/{pubId}/donate", null);
+                var body = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"[MarkAsDonated] {(int)response.StatusCode} — {body}");
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[Error MarkAsDonated]: {ex.Message}");
+                return false;
+            }
+        }
+
         public async Task<bool> DeletePublicationAsync(int pubId, string token)
         {
             try

@@ -142,6 +142,25 @@ export const updatePublication = async (req, res) => {
     }
 };
 
+export const donatePublication = async (req, res) => {
+    const { id } = req.params;
+    const userId = req.user.id;
+    try {
+        const [pub] = await pool.execute('SELECT useId FROM t_publication WHERE pubId = ?', [id]);
+        if (pub.length === 0) return res.status(404).json({ message: "Annonce non trouvée" });
+        if (pub[0].useId !== userId) return res.status(403).json({ message: "Accès refusé" });
+
+        await pool.execute(
+            "UPDATE t_publication SET pubStatus = 'Indisponible' WHERE pubId = ?",
+            [id]
+        );
+        res.json({ message: "Annonce marquée comme indisponible !" });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Erreur serveur" });
+    }
+};
+
 export const deletePublication = async (req, res) => {
     const { id } = req.params;
     const userId = req.user.id;

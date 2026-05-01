@@ -78,7 +78,6 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
                 }
             });
 
-            Task.Run(async () => await LoadPublicationsAsync());
         }
 
         public async Task LoadPublicationsAsync(string search = "", bool showSpinner = false)

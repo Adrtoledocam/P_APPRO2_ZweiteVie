@@ -130,7 +130,7 @@
                         <VerticalStackLayout Spacing="6">
                             <Label Text="CO₂ Économisé"
                                    FontSize="11" TextColor="#0D47A1" FontAttributes="Bold"/>
-                            <Label Text="{Binding UserTotalCo2, StringFormat='↗{0}kg'}"
+                            <Label Text="{Binding UserTotalCo2, StringFormat='↗{0}g'}"
                                    FontSize="22" FontAttributes="Bold" TextColor="#0D47A1"/>
                         </VerticalStackLayout>
                     </Frame>
@@ -168,16 +168,22 @@
                                            Aspect="AspectFill"
                                            HeightRequest="110"/>
 
-                                    <!-- Edit button — top left -->
+                                    <!-- Marquer comme donné — top left -->
                                     <Frame Grid.Row="0"
-                                           BackgroundColor="#AA000000"
+                                           IsVisible="{Binding IsAvailable}"
+                                           BackgroundColor="#AA008F39"
                                            CornerRadius="0" Padding="0"
                                            HorizontalOptions="Start"
                                            VerticalOptions="Start"
                                            Margin="6,6,0,0"
                                            WidthRequest="32" HeightRequest="32"
                                            BorderColor="Transparent">
-                                        <Label Text="✏️" FontSize="16"
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ProfileViewModel}}, Path=MarkAsDonatedCommand}"
+                                                CommandParameter="{Binding .}"/>
+                                        </Frame.GestureRecognizers>
+                                        <Label Text="🤝" FontSize="16"
                                                HorizontalOptions="Center" VerticalOptions="Center"/>
                                     </Frame>
 

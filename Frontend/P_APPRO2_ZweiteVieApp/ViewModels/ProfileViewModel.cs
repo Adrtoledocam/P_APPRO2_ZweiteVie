@@ -56,6 +56,7 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
         public ICommand ShareProfileCommand { get; }
         public ICommand LogoutCommand { get; }
         public ICommand DeletePublicationCommand { get; }
+        public ICommand MarkAsDonatedCommand { get; }
         public ICommand RefreshCommand { get; }
 
         public ProfileViewModel()
@@ -70,6 +71,7 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
 
             EditProfileCommand = new Command(async () => await ExecuteEditProfile());
             ShareProfileCommand = new Command(async () => await ExecuteShareProfile());
+            MarkAsDonatedCommand = new Command<Publication>(async (pub) => await ExecuteMarkAsDonated(pub));
             LogoutCommand = new Command(async () => await ExecuteLogout());
             DeletePublicationCommand = new Command<Publication>(async (pub) => await ExecuteDeletePublication(pub));
             RefreshCommand = new Command(async () =>
@@ -169,7 +171,7 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
             {
                 Title = "Mon profil ZweiteVie",
                 Text = $"Découvrez le profil de {CurrentUser?.UseName} sur ZweiteVie !\n" +
-                       $"{CurrentUser?.TotalPubs} annonces · {CurrentUser?.TotalDonated} objets donnés · {CurrentUser?.TotalCo2}kg CO₂ économisé"
+                       $"{CurrentUser?.TotalPubs} annonces · {CurrentUser?.TotalDonated} objets donnés · {CurrentUser?.TotalCo2}g CO₂ économisé"
             });
         }
 
@@ -193,6 +195,39 @@ namespace P_APPRO2_ZweiteVieApp.ViewModels
             catch (Exception ex)
             {
                 Console.WriteLine($"[DeletePublication Error]: {ex.Message}");
+            }
+        }
+
+        private async Task ExecuteMarkAsDonated(Publication pub)
+        {
+            if (pub == null) return;
+
+            bool confirm = await Application.Current.MainPage.DisplayAlert(
+                "Marquer comme donné", $"Retirer \"{pub.PubTitle}\" du catalogue ?", "Oui", "Non");
+            if (!confirm) return;
+
+            try
+            {
+                string token = await SecureStorage.GetAsync("auth_token");
+                if (string.IsNullOrEmpty(token))
+                {
+                    await Application.Current.MainPage.DisplayAlert("Erreur", "Token manquant.", "OK");
+                    return;
+                }
+
+                Console.WriteLine($"[MarkAsDonated] pubId={pub.PubId}");
+                bool success = await _apiService.MarkAsDonatedAsync(pub.PubId, token);
+                Console.WriteLine($"[MarkAsDonated] success={success}");
+
+                if (success)
+                    MainThread.BeginInvokeOnMainThread(() => MyPublications.Remove(pub));
+                else
+                    await Application.Current.MainPage.DisplayAlert("Erreur", "Impossible de marquer comme donné. Vérifiez les logs.", "OK");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[MarkAsDonated Error]: {ex.Message}");
+                await Application.Current.MainPage.DisplayAlert("Erreur", ex.Message, "OK");
             }
         }
 

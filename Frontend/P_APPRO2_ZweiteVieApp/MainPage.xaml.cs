@@ -12,13 +12,15 @@ namespace P_APPRO2_ZweiteVieApp
             BindingContext = new MainViewModel();
         }
 
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
-            if (BindingContext is MainViewModel vm && Preferences.Get("user_id", 0) == 0)
+            if (BindingContext is MainViewModel vm)
             {
-                foreach (var pub in vm.Publications)
-                    pub.IsFavorited = false;
+                await vm.LoadPublicationsAsync();
+                if (Preferences.Get("user_id", 0) == 0)
+                    foreach (var pub in vm.Publications)
+                        pub.IsFavorited = false;
             }
         }
 
